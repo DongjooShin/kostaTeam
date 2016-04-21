@@ -13,12 +13,19 @@
 <body>
 
 <h1>¼±°Å</h1>
-
-<c:choose>
-
-</c:choose>
 <br>
 
+<c:choose>
+<c:when test="">	<!-- case: manager -->
+
+
+
+
+</c:when>
+<c:when test="">	<!-- case: resident -->
+
+</c:when>
+</c:choose>
 
 
 
