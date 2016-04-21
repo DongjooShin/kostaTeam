@@ -38,7 +38,7 @@
 							<p id="site-description">경태경태</p>
 							
 						</div>
-					
+					 
 					</div>
 					<!-- #header-left-section -->
 					<div id="header-right-section">
