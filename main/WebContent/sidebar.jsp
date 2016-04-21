@@ -264,13 +264,13 @@ img.wp-smiley, img.emoji {
 		
 		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Min/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="bootstrap/css/styles.css" rel="stylesheet">
+    <link href="css/Min/bootstrap/css/styles.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/custom.js"></script>	
+    <script src="js/Min/js/bootstrap.min.js"></script>
+    <script src="js/Min/js/custom.js"></script>	
 		
 		<div class="row">
 	  <div class="col-md-2">

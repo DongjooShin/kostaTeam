@@ -166,46 +166,46 @@ img.wp-smiley, img.emoji {
                                  </ul></li>
                               <li id="menu-item-52"
                                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a
-                                 href="content.jsp">아파트 정보</a>
+                                 href="sidebar.jsp">아파트 정보</a>
                                  <ul class="sub-menu">
                                     <li id="menu-item-109"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a
-                                       href="kkt.jsp">부동산 뉴스</a></li>
+                                       href="sidebar.jsp">부동산 뉴스</a></li>
                                     <li id="menu-item-108"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a
-                                       href="jeonghwa.jsp">아파트 시세</a></li>
+                                       href="sidebar.jsp">아파트 시세</a></li>
                                     <li id="menu-item-106"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a
-                                       href="imsu.jsp">아파트 이미지</a></li>
+                                       href="sidebar.jsp">아파트 이미지</a></li>
                                     <li id="menu-item-107"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a
-                                       href="content.jsp">CCTV정보</a></li>
+                                       href="sidebar.jsp">CCTV정보</a></li>
                                     <li id="menu-item-107"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a
-                                       href="MIN.jsp">주변정보</a></li>
+                                       href="sidebar.jsp">주변정보</a></li>
                                        
                                  </ul>
                                  
                                  </li>
                               <li id="menu-item-111"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a
-                                 href="content.jsp">부동산 정보</a>
+                                 href="sidebar.jsp">부동산 정보</a>
                                  <ul class="sub-menu">
                                     <li id="menu-item-109"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a
-                                       href="content.jsp">부동산 뉴스</a></li>
+                                       href="sidebar.jsp">부동산 뉴스</a></li>
                                     <li id="menu-item-108"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a
-                                       href="content.jsp">아파트 시세</a></li>
+                                       href="sidebar.jsp">아파트 시세</a></li>
                                     <li id="menu-item-106"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a
-                                       href="content.jsp">아파트 이미지</a></li>
+                                       href="sidebar.jsp">아파트 이미지</a></li>
                                     <li id="menu-item-107"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a
-                                       href="content.jsp">CCTV정보</a></li>
+                                       href="sidebar.jsp">CCTV정보</a></li>
                                     <li id="menu-item-107"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a
-                                       href="content.jsp">주변정보</a></li>
+                                       href="sidebar.jsp">주변정보</a></li>
                                        
                                  </ul>
                                  
