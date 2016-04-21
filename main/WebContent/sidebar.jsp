@@ -25,9 +25,7 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='spacious-genericons-css'
 	href='http://demo.themegrill.com/spacious/wp-content/themes/spacious/genericons/genericons.css?ver=3.3.1'
 	type='text/css' media='all' />
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-       <script src="bootstrap/js/bootstrap.min.js"></script>
-       	
+	
 <script type='text/javascript'
 	src='http://demo.themegrill.com/spacious/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
 
@@ -145,23 +143,23 @@ img.wp-smiley, img.emoji {
 						
 								<li id="menu-item-9"
                                  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-9"><a
-                                 href="sidebar.jsp">관리비</a>
+                                 href="content.jsp">관리비</a>
                                  <ul class="sub-menu">
                                     <li id="menu-item-109"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a
-                                       href="sidebar.jsp">전체 관리비</a></li>
+                                       href="content.jsp">전체 관리비</a></li>
                                     <li id="menu-item-108"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a
-                                       href="sidebar.jsp">전기세</a></li>
+                                       href="content.jsp">전기세</a></li>
                                     <li id="menu-item-106"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a
-                                       href="sidebar.jsp">수도세</a></li>
+                                       href="content.jsp">수도세</a></li>
                                     <li id="menu-item-107"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a
-                                       href="sidebar.jsp">가스비</a></li>
+                                       href="content.jsp">가스비</a></li>
                                     <li id="menu-item-107"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a
-                                       href="sidebar.jsp">공동 관리비</a></li>
+                                       href="content.jsp">공동 관리비</a></li>
                                        
                                  </ul></li>
                               <li id="menu-item-52"
@@ -260,235 +258,60 @@ img.wp-smiley, img.emoji {
 			</div>
 
 		</div>
+		</header>
+		<!--@@@@@@@@@@@@@@@@@ 헤더부분 끝@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<!-- 사이드부분 시작@@@@@@@@@@@@@ -->
 		
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="bootstrap/css/styles.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/custom.js"></script>	
 		
-		<section id="featured-slider">
-		<div class="slider-cycle">
-			<div class="slides displayblock">
-				<figure> <img alt="Free Awesome slider"
-					src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/book.jpg">
-				</figure>
-				
-			</div>
-			<div class="slides displaynone">
-				<figure> <img alt="Clean Code"
-					src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/chess.jpg">
-				</figure>
-				
-			</div>
+		<div class="row">
+	  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                    <li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Calendar</a></li>
+                    <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>
+                    <li><a href="tables.html"><i class="glyphicon glyphicon-list"></i> Tables</a></li>
+                    <li><a href="buttons.html"><i class="glyphicon glyphicon-record"></i> Buttons</a></li>
+                    <li><a href="editors.html"><i class="glyphicon glyphicon-pencil"></i> Editors</a></li>
+                    <li><a href="forms.html"><i class="glyphicon glyphicon-tasks"></i> Forms</a></li>
+                    <li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Pages
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Signup</a></li>
+                        </ul>
+                    </li>
+                </ul>
+             </div>
+		  </div>
+		<!-- 사이드부분 끝@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<!-- 메인부분 시작@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<div class="col-md-10">
+		<h1>메인페이지</h1><br>
+		쓰는만큼 메인페이지가 밑으로 길어져요
+		
 		</div>
-		<nav id="controllers" class="clearfix"></nav> </section> </header>
-		
-		<div id="main" class="clearfix">
-			<div class="inner-wrap">
-				<div id="content" class="clearfix">
-
-					<section id="spacious_service_widget-2"
-						class="widget widget_service_block clearfix">
-					<div class="tg-one-third">
-						<div class="service-image">
-							<img width="150" height="150"
-								src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/time.png"
-								class="attachment-featured size-featured wp-post-image"
-								alt="time" />
-						</div>
-						<h3 class="widget-title">
-							<a title="Super Fast Loading"
-								href="http://demo.themegrill.com/spacious/super-fast-loading/">Super
-								Fast Loading</a>
-						</h3>
-						
-					</div>
-					<div class="tg-one-third">
-						<div class="service-image">
-							<img width="150" height="150"
-								src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/responsive1.png"
-								class="attachment-featured size-featured wp-post-image"
-								alt="responsive" />
-						</div>
-						<h3 class="widget-title">
-							<a title="Responsive Design"
-								href="http://demo.themegrill.com/spacious/responsive-design/">Responsive
-								Design</a>
-						</h3>
-					
-					</div>
-					<div class="tg-one-third">
-						<div class="service-image">
-							<img width="150" height="150"
-								src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/support.png"
-								class="attachment-featured size-featured wp-post-image"
-								alt="support" />
-						</div>
-						<h3 class="widget-title">
-							<a title="Awesome Support"
-								href="http://demo.themegrill.com/spacious/awesome-support/">Awesome
-								Support</a>
-						</h3>
-					
-					</div>
-					</section>
-					
-					
-					<div class="tg-one-half">
-					
-						<section id="spacious_featured_single_page_widget-2"
-							class="widget widget_featured_single_post clearfix">
-						<h3 class="widget-title">
-							<a href="http://demo.themegrill.com/spacious/just-arrived/"
-								title="Just Arrived">Just Arrived</a>
-						</h3>
-						<div class="service-image">
-							<img width="642" height="257"
-								src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/mac.jpg"
-								class="attachment-featured size-featured wp-post-image"
-								alt="Just Arrived" title="Just Arrived"
-								srcset="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/mac.jpg 750w, http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/mac-300x120.jpg 300w"
-								sizes="(max-width: 642px) 100vw, 642px" />
-						</div>
-						
-						</section>
-					</div>
-					
-					
-					
-					
-					<div class="tg-one-half tg-one-half-last">
-						<section id="spacious_testimonial_widget-2"
-							class="widget widget_testimonial clearfix">
-						<h3 class="widget-title">What our Client says</h3>
-						<div class="testimonial-icon"></div>
-						<div class="testimonial-post">
-						
-						</div>
-						<div class="testimonial-author">
-							<span>Mr. Biping Singh</span> CEO
-						</div>
-						</section>
-						<section id="spacious_testimonial_widget-3"
-							class="widget widget_testimonial clearfix">
-						<div class="testimonial-icon"></div>
-						<div class="testimonial-post">
-						
-						</div>
-						<div class="testimonial-author">
-							<span>Mr. XYZ</span> Manager
-						</div>
-						</section>
-					</div>
-					<div class="clearfix"></div>
-					<section id="spacious_recent_work_widget-2"
-						class="widget widget_recent_work clearfix">
-						
-					<div class="tg-one-fourth tg-column-1">
-						<h3 class="widget-title">Recent Work</h3>
-						<p>Use the TG:Featured Widget to show this section. In the
-							widget just add the title and description. Then add three pages
-							from the three drop down option. The featured images of those
-							pages will be shown in the right and link back to those added
-							pages.</p>
-					</div>
-					<div class="tg-one-fourth tg-column-2">
-						<div class="service-image">
-							<a title="Recent Work Skateboard"
-								href="http://demo.themegrill.com/spacious/recent-work-skateboard/"><img
-								width="270" height="270"
-								src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/skateboard-270x270.png"
-								class="attachment-featured-blog-medium size-featured-blog-medium wp-post-image"
-								alt="skateboard"
-								srcset="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/skateboard-270x270.png 270w, http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/skateboard-150x150.png 150w"
-								sizes="(max-width: 270px) 100vw, 270px" /></a>
-						</div>
-					</div>
-					<div class="tg-one-fourth tg-after-two-blocks-clearfix tg-column-3">
-						<div class="service-image">
-							<a title="Recent Work Spectacle"
-								href="http://demo.themegrill.com/spacious/recent-work-spectacle/"><img
-								width="270" height="270"
-								src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/Spectacle-270x270.png"
-								class="attachment-featured-blog-medium size-featured-blog-medium wp-post-image"
-								alt="Spectacle"
-								srcset="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/Spectacle-270x270.png 270w, http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/Spectacle-150x150.png 150w"
-								sizes="(max-width: 270px) 100vw, 270px" /></a>
-						</div>
-					</div>
-					<div class="tg-one-fourth tg-one-fourth-last tg-column-4">
-						<div class="service-image">
-							<a title="Recent Work Camera"
-								href="http://demo.themegrill.com/spacious/recent-work-camera/"><img
-								width="270" height="270"
-								src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/Camera-270x270.png"
-								class="attachment-featured-blog-medium size-featured-blog-medium wp-post-image"
-								alt="Camera"
-								srcset="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/Camera-270x270.png 270w, http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2014/03/Camera-150x150.png 150w"
-								sizes="(max-width: 270px) 100vw, 270px" /></a>
-						</div>
-					</div>
-					</section>
-				</div>
 
 
-			</div>
-			<!-- .inner-wrap -->
-		</div>
-		<!-- #main -->
-		<footer id="colophon" class="clearfix">
 
-	
-		<div class="footer-socket-wrapper clearfix">
-			<div class="inner-wrap">
-				<div class="footer-socket-area">
-					<div class="copyright">
-						Copyright &copy; 2016 <a
-							href="http://demo.themegrill.com/spacious/" title="Spacious"><span>Spacious</span></a>.
-						Powered by <a href="http://wordpress.org" target="_blank"
-							title="WordPress"><span>WordPress</span></a>. Theme: Spacious by
-						<a href="http://themegrill.com/themes/spacious" target="_blank"
-							title="ThemeGrill" rel="designer"><span>ThemeGrill</span></a>.
-					</div>
-					<nav class="small-menu clearfix">
-					<div class="menu-footer-menu-container">
-						<ul id="menu-footer-menu-1" class="menu">
-							<li
-								class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a
-								title="ThemeGrill" href="http://themegrill.com">ThemeGrill</a></li>
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a
-								href="http://demo.themegrill.com/spacious/typography/">Typography</a></li>
-							<li
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a
-								href="http://demo.themegrill.com/spacious/contact-us/">Contact
-									Us</a></li>
-						</ul>
-					</div>
-					</nav>
-				</div>
-			</div>
 		</div>
-		</footer>
 		
-	</div>
-	
-	
-	<script
-		src="https://www.google.com/recaptcha/api.js?onload=wp_recaptchaLoadCallback&#038;render=explicit"
-		async defer></script>
-	
-	<div class="stb-container stb-center-container">
-		<div class="scroll-triggered-box stb stb-209 stb-center" id="stb-209"
-			style="display: none;">
-			<div class="stb-content">
-				<p>
-					<a href="http://themegrill.com/themes/estore"
-						rel="attachment wp-att-210"><img
-						class="aligncenter size-full wp-image-210"
-						style="margin-bottom: 0;"
-						src="http://demo.themegrill.com/spacious/wp-content/uploads/sites/2/2016/03/estore-popup-new-1.jpg"
-						alt="eStore WooCommerce Theme" width="600" height="270" /></a>
-				</p>
-			</div>
-			<span class="stb-close">&times;</span>
-		</div>
+		
+		
 	</div>
 
 	<script type='text/javascript'
