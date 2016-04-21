@@ -1,4 +1,5 @@
 
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -89,7 +90,7 @@ img { max-width: 100%; }
     padding: 100px 0 170px 0;
 }
 .top-content{
-	background-image: url("../../images/dong/1.jpg");
+	background-image: url("../../images/dong/1@2x.jpg");
 	
 }
 .top-content .text {
@@ -170,6 +171,8 @@ img { max-width: 100%; }
 .social-login-buttons {
 	margin-top: 25px;
 }
+
+
 
 
 /***** Media queries *****/

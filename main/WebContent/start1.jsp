@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-US">
@@ -6,87 +6,15 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spacious &#8211; ThemeGrill Demo site</title>
-<style type="text/css">
-img.wp-smiley, img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel='stylesheet' id='spacious_style-css'
-	href='http://demo.themegrill.com/spacious/wp-content/themes/spacious/style.css?ver=93f7ae8c928ef17b2e2e9a75b559118c'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='spacious-genericons-css'
-	href='http://demo.themegrill.com/spacious/wp-content/themes/spacious/genericons/genericons.css?ver=3.3.1'
-	type='text/css' media='all' />
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-       <script src="bootstrap/js/bootstrap.min.js"></script>
-       	
-<script type='text/javascript'
-	src='http://demo.themegrill.com/spacious/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
-
-<style type="text/css">
-.recentcomments a { 
-	display: inline !important;
-	padding: 0 !important;
-	margin: 0 !important;
-}
-
-.sub-menu1{
-   display: inline;
-   width: 250px;
-   margin-right: 20px;
-}
- 
-.sub-menu1 li{
-
-   display: inline;
-   padding-left: 10px;
-}
-.sub-menu1 li a{
-   color: black;
-}
-
-.search-wrap{
-   display: inline;
-   width: 250px;
-}
-</style>
-
-<style type="text/css">
-
-.sub-menu1{
-   display: inline;
-   width: 250px;
-   margin-right: 20px;
-}
-
-.sub-menu1 li{
-
-   display: inline;
-   padding-left: 10px;
-}
-.sub-menu1 li a{
-   color: black;
-}
-
-.search-wrap{
-   display: inline;
-   width: 250px;
-}
-
-</style>
-
-<script type="text/javascript">$SA = {s:243437, asynch: 1, useBlacklistUrl: 1};(function() {   var sa = document.createElement("script");   sa.type = "text/javascript";   sa.async = true;   sa.src = ("https:" == document.location.protocol ? "https://" + $SA.s + ".sa" : "http://" + $SA.s + ".a") + ".siteapps.com/" + $SA.s + ".js";   var t = document.getElementsByTagName("script")[0];   t.parentNode.insertBefore(sa, t);})();</script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/mainLink1.css">
+<link rel="stylesheet" href="css/mainLink2.css">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src='http://demo.themegrill.com/spacious/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
 </head>
 
-<body class="home singular page page-id-7 page-template page-template-page-templates page-template-business page-template-page-templatesbusiness-php ">
+
+<body>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header clearfix">
 
@@ -120,7 +48,7 @@ img.wp-smiley, img.emoji {
 								class="search-form searchform clearfix" method="get">
 							
 								<ul class="sub-menu1">
-                                    <li><a href="">로그인</a></li>
+                                    <li><a href="login.jsp">로그인</a></li>
                                     <li><a href="">회원가입</a></li>
                                     <li><a href="">길라잡이</a></li>
                                     
@@ -491,11 +419,7 @@ img.wp-smiley, img.emoji {
 		</div>
 	</div>
 
-	<script type='text/javascript'
-		src='http://demo.themegrill.com/spacious/wp-content/themes/spacious/js/jquery.cycle.all.min.js?ver=3.0.3'></script>
 	
-	<script type='text/javascript'
-		src='http://demo.themegrill.com/spacious/wp-content/themes/spacious/js/spacious-slider-setting.js?ver=93f7ae8c928ef17b2e2e9a75b559118c'></script>
 	
 	
 
