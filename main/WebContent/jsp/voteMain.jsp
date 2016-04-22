@@ -1,3 +1,4 @@
+<%@page import="apt.classes.Member"%>
 <%@page import="apt.dao.AptService"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -7,7 +8,9 @@
   
 <%
 	AptService aptService = AptService.getInstance();
-	
+	Member m = new Member("temp","1234",21,101, 108,"홍길동","temp@naver.com",2,"두산위브","021112222","01033334444",1);
+	 
+	request.setAttribute("m", m);
 %>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,15 +24,15 @@
 <br>
 
 <c:choose>
-<c:when test="">	<!-- case: manager -->
+<c:when test="${m.getM_grade() == 2 }">	<!-- case: manager -->
 
 
 
 
 </c:when>
-<c:when test="">	<!-- case: resident -->
+<c:otherwise>	<!-- case: resident -->
 
-</c:when>
+</c:otherwise>
 </c:choose>
 
 
