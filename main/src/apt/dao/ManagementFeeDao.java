@@ -34,13 +34,12 @@ public class ManagementFeeDao {
 		
 	}
 	
-	public JSONObject selectManagementFee(){
+	public Object selectManagementFee(){
 		SqlSession sqlsession = getsqlsessionFactory().openSession();
 		
 		List list = sqlsession.getMapper(Management.class).selectManagementFee();
 		sqlsession.close();
 		
-		JSONObject jmain = new JSONObject();
         net.sf.json.JSONArray jArray = new net.sf.json.JSONArray();        /* row별로 데이터를 담을 배열 */
         
         String str= jArray.fromObject(list).toString();
@@ -49,16 +48,13 @@ public class ManagementFeeDao {
 			Object re= parser.parse(str);
 			
 			System.out.println(re);
+			return re;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
        
-       
-       return jmain;
-
-		
-		
+       return null;
 	}
 	
 }

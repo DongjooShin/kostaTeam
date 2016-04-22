@@ -34,9 +34,8 @@ public class AptService {
 	// 경태
 
 	// 기대
-	public void selectmanagementfee(){
-		mfd.selectManagementFee();
-		
+	public Object selectmanagementfee(){
+		return mfd.selectManagementFee();
 	}
 
 	// 경운
