@@ -8,10 +8,10 @@
 
 <%
 	AptService aptService = AptService.getInstance();
-
+	Member m = aptService.selectOneMemberService("tndusdla92");
 	//m = manager, r = resident
-
-	//	request.setAttribute("m", m);
+	
+	request.setAttribute("m", m);
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,6 +19,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" href="../css/jeong/vote.css"> 
 </head>
 <body>
 

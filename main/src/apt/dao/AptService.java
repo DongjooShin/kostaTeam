@@ -30,7 +30,7 @@ public class AptService {
 	// 정화
 
 	public Member selectOneMemberService(String id){
-		return selectOneMemberService(id);
+		return memberdao.selectOneMember(id);
 	}
 
 	// 수연
