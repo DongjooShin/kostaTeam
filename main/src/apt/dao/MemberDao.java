@@ -52,4 +52,18 @@ public class MemberDao {
 		}
 		return re;
 	}
+	
+	public Member selectOneMember(String id){
+		Member m = new Member();
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		
+		try {
+			m = sqlSession.getMapper(M_signupMapper.class).selectOneMember(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return m;
+	}
 }

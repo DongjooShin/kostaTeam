@@ -12,9 +12,10 @@ public class AptService {
 	
 	
 	public static AptService getInstance(){
+		votedao = VoteDao.getInstance();
+		memberdao=MemberDao.getInstance();
 		mfd=ManagementFeeDao.getInstance();
 		return service;
-		
 	}
 	
 	
@@ -28,7 +29,9 @@ public class AptService {
 	
 	// 정화
 
-
+	public Member selectOneMemberService(String id){
+		return selectOneMemberService(id);
+	}
 
 	// 수연
 
