@@ -37,9 +37,15 @@
 					</form>
 				</c:when>
 				<c:when test="${m.getV_flag() == 2 }">
-
+					<c:forEach var="n" begin="0" end="">
+						<c:if test="">
+							n++;
+						</c:if>
+					</c:forEach>
+					
 				</c:when>
 				<c:when test="${m.getV_flag() == 3 }">
+					
 				</c:when>
 				<c:when test="${m.getV_flag() == 4 }">
 				</c:when>
