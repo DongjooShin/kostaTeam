@@ -1,115 +1,56 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>APT Management Login Page</title>
+<title>Spacious &#8211; ThemeGrill Demo site</title>
 
-<!-- CSS -->
-<link rel="stylesheet"
-	href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-<link rel="stylesheet" href="bootstrap/dong/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/dong/form-elements.css">
-<link rel="stylesheet" href="css/dong/style.css">
-
-<!-- Javascript -->
-<script src="js/dong/jquery-1.11.1.min.js"></script>
-<script src="bootstrap/dong/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/dong/Preperty.css">
+<link rel="stylesheet" href="css/mainLink1.css">
+<link rel="stylesheet" href="css/mainLink2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/Min/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/Min/bootstrap/css/styles.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/Min/js/bootstrap.min.js"></script>
+<script src="js/Min/js/custom.js"></script>
+<link rel="stylesheet" href="cosmo/bootstrap.css" media="screen">
+<link rel="stylesheet" href="assets/css/custom.min.css">
 <style type="text/css">
+.form-control {
+	width: 100%;
+}
 
-img.wp-smiley, img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
+.col-md-12 {
+	margin-bottom: 15px;
+}
+
+.col-md-9 {
+	margin-top: 30px;
+}
+
+#inputForm {
+	border: 1px solid;
+	margin-top: 30px;
+}
+
+.phoneNum {
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+.phoneNumfirst {
+	padding-left: 0px;
+}
+
+.control-label {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 </style>
-<link rel='stylesheet' id='spacious_style-css'
-	href='http://demo.themegrill.com/spacious/wp-content/themes/spacious/style.css?ver=93f7ae8c928ef17b2e2e9a75b559118c'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='spacious-genericons-css'
-	href='http://demo.themegrill.com/spacious/wp-content/themes/spacious/genericons/genericons.css?ver=3.3.1'
-	type='text/css' media='all' />
-
-<script type='text/javascript'
-	src='http://demo.themegrill.com/spacious/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
-
-<style type="text/css">
-.recentcomments a {
-	display: inline !important;
-	padding: 0 !important;
-	margin: 0 !important;
-}
-
-.sub-menu1 {
-	display: inline;
-	width: 250px;
-	margin-right: 20px;
-}
-
-.sub-menu1 li {
-	display: inline;
-	padding-left: 10px;
-}
-
-.sub-menu1 li a {
-	color: black;
-}
-
-.search-wrap {
-	display: inline;
-	width: 250px;
-}
-</style>
-
-<style type="text/css">
-.sub-menu1 {
-	display: inline;
-	width: 250px;
-	margin-right: 20px;
-}
-
-.sub-menu1 li {
-	display: inline;
-	padding-left: 10px;
-}
-
-.sub-menu1 li a {
-	color: black;
-}
-
-.search-wrap {
-	display: inline;
-	width: 250px;
-}
-</style>
-
-<script type="text/javascript">
-	$SA = {
-		s : 243437,
-		asynch : 1,
-		useBlacklistUrl : 1
-	};
-	(function() {
-		var sa = document.createElement("script");
-		sa.type = "text/javascript";
-		sa.async = true;
-		sa.src = ("https:" == document.location.protocol ? "https://" + $SA.s
-				+ ".sa" : "http://" + $SA.s + ".a")
-				+ ".siteapps.com/" + $SA.s + ".js";
-		var t = document.getElementsByTagName("script")[0];
-		t.parentNode.insertBefore(sa, t);
-	})();
-</script>
 </head>
 
 <body
@@ -139,6 +80,7 @@ img.wp-smiley, img.emoji {
 						</div>
 
 					</div>
+
 					<!-- #header-left-section -->
 					<div id="header-right-section">
 						<div id="header-right-sidebar" class="clearfix">
@@ -277,71 +219,188 @@ img.wp-smiley, img.emoji {
 
 		</div>
 		</header>
+		<!--@@@@@@@@@@@@@@@@@ 헤더부분 끝@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<!-- 사이드부분 시작@@@@@@@@@@@@@ -->
 
-		<div class="col-md-12">
-			<!-- Top content -->
-			<div class="top-content" id="widthsize">
 
-				<div class="inner-bg">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-8 col-sm-offset-2 text">
-								<h1>
-									<strong>Login</strong>
-								</h1>
-								<div class="description">
-									<p>
-										<strong id="titleStrong">APT Management</strong>에 오신것을 환영합니다
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3 form-box">
-								<div class="form-top">
-									<div class="form-top-left">
-										<h3>Login to our site</h3>
-										<p>Enter your id and password to log on:</p>
-									</div>
-									<div class="form-top-right">
-										<i class="fa fa-key"></i>
-									</div>
-								</div>
-								<div class="form-bottom">
-									<form role="form" action="" method="post" class="login-form">
-										<div class="form-group">
-											<label class="sr-only" for="form-username">Username</label> <input
-												type="text" name="form-username" placeholder="Username..."
-												class="form-username form-control" id="form-username">
-										</div>
-										<div class="form-group">
-											<label class="sr-only" for="form-password">Password</label> <input
-												type="password" name="form-password"
-												placeholder="Password..." class="form-password form-control"
-												id="form-password">
-										</div>
-										<button type="submit" class="btn">Sign in!</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
+
+		<div class="row">
+			<div class="col-md-2">
+				<div class="sidebar content-box" id="sidebarBoard"
+					style="display: block;">
+					<ul class="nav">
+						<!-- Main menu -->
+						<li class="current"><a href="index.html"><i
+								class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+						<li><a href="calendar.html"><i
+								class="glyphicon glyphicon-calendar"></i> 매매</a></li>
+						<li><a href="stats.html"><i
+								class="glyphicon glyphicon-stats"></i> 전세</a></li>
+						<li><a href="tables.html"><i
+								class="glyphicon glyphicon-list"></i> 월세</a></li>
+						<li><a href="buttons.html"><i
+								class="glyphicon glyphicon-record"></i> 시세정보</a></li>
+
+					</ul>
 				</div>
+			</div>
+			<!-- 사이드부분 끝@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+			<!-- 메인부분 시작@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+			<div class="col-md-9">
 
+				<h2>아파트 매물올리기</h2>
+				<p class="bs-component">
+					<!-- <a href="#" class="btn btn-default">Default</a>
+              <a href="#" class="btn btn-primary">Primary</a>
+              <a href="#" class="btn btn-success">Success</a>
+              <a href="#" class="btn btn-info">Info</a>
+              <a href="#" class="btn btn-warning">Warning</a>
+              <a href="#" class="btn btn-danger">Danger</a> -->
+					<a href="#" class="btn btn-primary">매매</a> <a href="#"
+						class="btn btn-primary">전세</a> <a href="#" class="btn btn-primary">월세</a>
+				</p>
 			</div>
 
+			<div class="col-md-9">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="well bs-component">
+							<form class="form-horizontal" action="aptSaleOk.jsp" method="post" >
+								
+									<legend>Legend</legend>
 
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">건물명</label>
+										<div class="col-lg-7">
+											<input type="text" class="form-control" placeholder="건물명">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">휴대폰번호</label>
+										<div class="col-lg-7">
+											<div class="col-lg-4 phoneNumfirst">
+												<input type="text" class="form-control" placeholder="010">
+											</div>
+
+											<div class="col-lg-4 phoneNum">
+												<input type="text" class="form-control" placeholder="1234">
+											</div>
+
+											<div class="col-lg-4 phoneNum">
+												<input type="text" class="form-control" placeholder="5678">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">건물주소</label>
+										<div class="col-lg-7">
+											<input type="text" class="form-control" placeholder="건물주소">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">희망가</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="희망가">
+										</div>
+
+										<label class="col-lg-1 control-label">보증금</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="보증금">
+										</div>
+
+
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">매물층</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="매물층">
+										</div>
+
+										<label class="col-lg-1 control-label">총층수</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="총층수">
+										</div>
+
+
+									</div>
+
+									<div class="form-group">
+										<label for="select" class="col-lg-3 control-label">현관구조</label>
+										<div class="col-lg-3">
+											<select class="form-control" id="select">
+												<option>복도식</option>
+												<option>현관식</option>
+												<option>기타</option>
+											</select>
+										</div>
+										
+										
+										<label class="col-lg-1 control-label">실면적</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="실면적">
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<label class="col-lg-3 control-label">방갯수</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="방갯수">
+										</div>
+
+										<label class="col-lg-1 control-label">욕실수</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="욕실수">
+										</div>
+
+
+									</div>
+									
+									<div class="form-group">
+										<label class="col-lg-3 control-label">단지규모</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="단지규모">
+										</div>
+
+										<label class="col-lg-1 control-label">건설회사</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="건설회사">
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<label for="textArea" class="col-lg-3 control-label">설명</label>
+										<div class="col-lg-7">
+											<textarea class="form-control" rows="3" id="textArea"></textarea>
+											<span class="help-block"> 구매자에게 남기고 싶은 말을 남겨주세요!</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<div class="col-lg-6 col-lg-offset-5">
+											<button type="reset" class="btn btn-default">Cancel</button>
+											<button type="submit" class="btn btn-primary">Submit</button>
+										</div>
+									</div>
+								</form>
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div>
+
 	</div>
 
-	<script type='text/javascript'
-		src='http://demo.themegrill.com/spacious/wp-content/themes/spacious/js/jquery.cycle.all.min.js?ver=3.0.3'></script>
-
-	<script type='text/javascript'
-		src='http://demo.themegrill.com/spacious/wp-content/themes/spacious/js/spacious-slider-setting.js?ver=93f7ae8c928ef17b2e2e9a75b559118c'></script>
-
-
-
-
+	<br>
+	<br>
+	<br>
 </body>
 </html>
