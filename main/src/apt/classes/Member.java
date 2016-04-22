@@ -3,7 +3,7 @@ package apt.classes;
 import java.io.Serializable;
 
 public class Member implements Serializable {
-	private int m_memberNo;
+	private String m_memberNo;
 	private String m_pass;
 	private int m_age;
 	private int m_buildingNo;
@@ -16,22 +16,45 @@ public class Member implements Serializable {
 	private String m_tel;
 	private int apt_APTGNo;
 	
-	private int v_mflag=1;	//case:manager
+	private int v_flag=1;	//case:manager
 	//1: there is no election. candidate register button is here.
 	//2: manager is ongoing to put candidate. there are modify and registry button.
 	//3: election is registered. there is image that vote is processing
 	//4: election is ended. there is a button for returning to flag 1
-	private int v_rflag=1;	//case:resident
+							//case:resident
 	//1: there is no election. two pictures are here.
 	//2: election is starting. there is vote button.
 	//3: election is ongoing but this resident already vote. 
 	//4: election is ending. vote result is noticing. if manager click the end noticing button, flag return to 1
 
+	public Member() {
+		super();
+	}
 	
-	public int getM_memberNo() {
+	public Member(String m_memberNo, String m_pass, int m_age, int m_buildingNo, int m_roomNo, String m_name,
+			String m_email, int m_grade, String m_addr, String m_homeTel, String m_tel, int apt_APTGNo) {
+		super();
+		this.m_memberNo = m_memberNo;
+		this.m_pass = m_pass;
+		this.m_age = m_age;
+		this.m_buildingNo = m_buildingNo;
+		this.m_roomNo = m_roomNo;
+		this.m_name = m_name;
+		this.m_email = m_email;
+		this.m_grade = m_grade;
+		this.m_addr = m_addr;
+		this.m_homeTel = m_homeTel;
+		this.m_tel = m_tel;
+		this.apt_APTGNo = apt_APTGNo;
+		
+	}
+
+
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	public String getM_pass() {
@@ -100,19 +123,12 @@ public class Member implements Serializable {
 	public void setApt_APTGNo(int apt_APTGNo) {
 		this.apt_APTGNo = apt_APTGNo;
 	}
-	public int getV_mflag() {
-		return v_mflag;
+	public int getV_flag() {
+		return v_flag;
 	}
-	public void setV_mflag(int v_mflag) {
-		this.v_mflag = v_mflag;
+	public void setV_flag(int v_mflag) {
+		this.v_flag = v_mflag;
 	}
-	public int getV_rflag() {
-		return v_rflag;
-	}
-	public void setV_rflag(int v_rflag) {
-		this.v_rflag = v_rflag;
-	}
-	
 	
 	
 }
