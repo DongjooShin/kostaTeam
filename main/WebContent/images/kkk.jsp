@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-GIT아 정신차려라
 
 </body>
 </html>
