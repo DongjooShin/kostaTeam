@@ -33,4 +33,5 @@ public class Voter implements Serializable {
 		this.m_memberNo = m_memberNo;
 	}
 	
+	
 }

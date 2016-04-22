@@ -1,15 +1,19 @@
 package apt.dao;
 
+import apt.classes.Member;
+
 public class AptService {
 //----------------------Singleton area--------------------------
-
-	public static VoteDao dao;
+	public static MemberDao memberdao; 
+	public static VoteDao votedao;
+	
 	public static AptService service = new AptService();
 //	------------------------------------------------------------
 	
 //------------------getInstance------------------------------	
 	public static AptService getInstance() {
-		dao = VoteDao.getInstance();
+		votedao = VoteDao.getInstance();
+		memberdao = MemberDao.getInstance();
 		return service;
 	}	
 //---------------------------------------------------------------	
@@ -18,7 +22,6 @@ public class AptService {
 	// 동주
 
 	// 정화
-
 
 
 
