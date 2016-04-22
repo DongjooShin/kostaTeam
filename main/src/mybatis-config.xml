@@ -19,6 +19,7 @@
 	
 	<mappers>
 		<mapper resource="apt/xml/Apt.xml"/>
+		<mapper resource="apt/xml/ManagementFee.xml"/>
 	</mappers>
 	
 </configuration>
