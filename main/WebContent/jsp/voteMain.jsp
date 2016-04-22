@@ -9,7 +9,8 @@
 <%
 	AptService aptService = AptService.getInstance();
 	Member m = new Member("temp","1234",21,101, 108,"홍길동","temp@naver.com",2,"두산위브","021112222","01033334444",1);
-	 
+	//m = manager, r = resident
+			
 	request.setAttribute("m", m);
 %>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
