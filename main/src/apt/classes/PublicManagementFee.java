@@ -17,8 +17,14 @@ public class PublicManagementFee implements Serializable {
 	private int liftElectric;
 	private int TVFee;
 	private int disinfection;
+	private int apt_APTGNo;
 	
-	
+	public int getApt_APTGNo() {
+		return apt_APTGNo;
+	}
+	public void setApt_APTGNo(int apt_APTGNo) {
+		this.apt_APTGNo = apt_APTGNo;
+	}
 	public int getPm_publicFeeNo() {
 		return pm_publicFeeNo;
 	}

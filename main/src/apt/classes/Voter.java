@@ -7,7 +7,14 @@ public class Voter implements Serializable {
 	private int v_buildingNo;
 	private int v_roomNo;
 	private int m_memberNo;
+	private int apt_APTGNo;
 	
+	public int getApt_APTGNo() {
+		return apt_APTGNo;
+	}
+	public void setApt_APTGNo(int apt_APTGNo) {
+		this.apt_APTGNo = apt_APTGNo;
+	}
 	public int getV_voterNo() {
 		return v_voterNo;
 	}

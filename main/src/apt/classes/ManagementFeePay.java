@@ -10,8 +10,14 @@ public class ManagementFeePay implements Serializable {
 	private int p_amount;
 	private String p_means;
 	private int mf_managementFeeNo;
+	private int apt_APTGNo;
 	
-	
+	public int getApt_APTGNo() {
+		return apt_APTGNo;
+	}
+	public void setApt_APTGNo(int apt_APTGNo) {
+		this.apt_APTGNo = apt_APTGNo;
+	}
 	public int getP_payNo() {
 		return p_payNo;
 	}
