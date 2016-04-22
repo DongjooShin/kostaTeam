@@ -16,6 +16,17 @@ public class Member implements Serializable {
 	private String m_tel;
 	private int apt_APTGNo;
 	
+	private int v_mflag=1;	//case:manager
+	//1: there is no election. candidate register button is here.
+	//2: manager is ongoing to put candidate. there are modify and registry button.
+	//3: election is registered. there is image that vote is processing
+	//4: election is ended. there is a button for returning to flag 1
+	private int v_rflag=1;	//case:resident
+	//1: there is no election. two pictures are here.
+	//2: election is starting. there is vote button.
+	//3: election is ongoing but this resident already vote. 
+	//4: election is ending. vote result is noticing. if manager click the end noticing button, flag return to 1
+
 	
 	public int getM_memberNo() {
 		return m_memberNo;
@@ -89,5 +100,19 @@ public class Member implements Serializable {
 	public void setApt_APTGNo(int apt_APTGNo) {
 		this.apt_APTGNo = apt_APTGNo;
 	}
+	public int getV_mflag() {
+		return v_mflag;
+	}
+	public void setV_mflag(int v_mflag) {
+		this.v_mflag = v_mflag;
+	}
+	public int getV_rflag() {
+		return v_rflag;
+	}
+	public void setV_rflag(int v_rflag) {
+		this.v_rflag = v_rflag;
+	}
+	
+	
 	
 }
