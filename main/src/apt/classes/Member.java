@@ -11,7 +11,6 @@ public class Member implements Serializable {
 	private String m_name;
 	private String m_email;
 	private int m_grade;
-	private String m_addr;
 	private String m_homeTel;
 	private String m_tel;
 	private int apt_APTGNo;
@@ -42,7 +41,6 @@ public class Member implements Serializable {
 		this.m_name = m_name;
 		this.m_email = m_email;
 		this.m_grade = m_grade;
-		this.m_addr = m_addr;
 		this.m_homeTel = m_homeTel;
 		this.m_tel = m_tel;
 		this.apt_APTGNo = apt_APTGNo;
@@ -98,12 +96,6 @@ public class Member implements Serializable {
 	}
 	public void setM_grade(int m_grade) {
 		this.m_grade = m_grade;
-	}
-	public String getM_addr() {
-		return m_addr;
-	}
-	public void setM_addr(String m_addr) {
-		this.m_addr = m_addr;
 	}
 	public String getM_homeTel() {
 		return m_homeTel;
