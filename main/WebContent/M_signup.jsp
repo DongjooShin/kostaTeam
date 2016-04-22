@@ -3,22 +3,49 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 
 <html>
 <head>
 		<meta charset="utf-8">
-		<link href="css/Min/bootstrap/css/style1.css" rel='stylesheet' type='text/css' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<!--webfonts-->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text.css'/>
-		<!--//webfonts-->
+		<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/dong/Preperty.css">
+<link rel="stylesheet" href="css/mainLink1.css">
+<link rel="stylesheet" href="css/mainLink2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/Min/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/Min/bootstrap/css/styles.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/Min/js/bootstrap.min.js"></script>
+<script src="js/Min/js/custom.js"></script>
+<link rel="stylesheet" href="cosmo/bootstrap.css" media="screen">
+<link rel="stylesheet" href="assets/css/custom.min.css"><style type="text/css">
+		
+.phoneNum {
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+.phoneNumfirst {
+	padding-left: 0px;
+}
+
+#emailCheck{
+	margin-left: -15px;
+	margin-right: -50px;
+	font-size: 25px;
+}
+#emailDomain{
+	padding-left: 0;
+	margin-left: 0;
+}
+#idCheck{
+	margin-top: 1px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+		</style>
+		
 </head>
 <body>
 
@@ -27,106 +54,142 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 
 
-
-</script>
 	<div class="main">
 		<div class="header" >
 			<h1>(XXX아파트(아파트클릭시 아파트그룹번호자동으로가져옴) 회원가입)</h1>
 		</div>
-		<p>1.이메일을 정확히 입력해주세요. 이메일인증을 통해 회원가입이 이루어 집니다.<br>
-		   2.아파트관리자의 승인시 XXX아파트를 이용하실 수 있습니다.
-		</p>
-			<form action="M_signupInsert.jsp" method="post" name="form">
-				<ul class="left-form">
-					<h2>아파트 가입</h2>
-				
-						이름
-					<li>
-						<input type="text" name="m_name"  placeholder="이름" required />
-						<a href="#" class="icon ticker"> </a>
-						<div class="clear"> </div>
-					</li> 
-					
-					아이디
-					<li>
-						<input type="text" name="m_memberNo" class="left_id" placeholder="(6~16자 이내)" required onblur="idchk()" />
-						
-						<input type="button" name="s_confirm_id" value="중복확인" onclick="confirmId(this.form)" />
-						<a href="#" class="icon ticker"> </a>
-						<div class="clear"> </div>
-					</li> 
-					
-					비밀번호 입력
-					<li>
-						
-						<input type="password" name="m_pass"   placeholder="문자/숫자 6~16자이내" required/>
-						<a href="#" class="icon into"> </a>
-						<div class="clear"> </div>
-					</li> 
-					비밀번호 재입력
-					<li>
-						
-						<input type="password" name="m_repass"   placeholder="비밀번호 재입력" required/>
-						<a href="#" class="icon into"> </a>
-						<div class="clear"> </div>
-					</li> 
-					
-				
-				</ul>
-				<ul class="right-form">
-						<h2> &nbsp;</h2>
-					
-					<div>
-					이메일
-					<li class="right_li">
-						
-						<input type="text" name="m_email" class="m_email"  placeholder="Email" required/>
-						<a href="#" class="icon ticker"> </a>
-						<div class="clear"> </div>
-					</li> 
-					<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>
-					<font color="blue">아파토의 메일을 수신하겠습니다.</font> </label>
-					
-					<br>
-						동/호수
-					<li>
-					
-						<input type="text" name="m_buildingNo" class="right_dong"   placeholder="동" required/>동
-						<input type="text" name="m_roomNo" class="right_dong"   placeholder="호" required/>호
-						<a href="#" class="icon ticker"> </a>
-						<div class="clear"> </div>
-					</li> 
-					
-					전화번호
-					<li>
-						
-						<input type="text"  name="s_phon1" class="right_phone"  placeholder="02" required/>-
-						<input type="text" name="s_phon2" class="right_phone"  placeholder="4052" required/>-
-						<input type="text" name="s_phon3" class="right_phone"  placeholder="8027" required/>
-						<a href="#" class="icon ticker"> </a>
-						<div class="clear"> </div>
-					</li> 
-					휴대전화번호
-					<li>
-						<input type="text" name="s_mphon1"  class="right_phone"  placeholder="010" required/>-
-						<input type="text" name="s_mphon2"  class="right_phone"  placeholder="4052" required/>-
-						<input type="text" name="s_mphon3"  class="right_phone"  placeholder="8027" required/>
-						<a href="#" class="icon ticker"> </a>
-						<div class="clear"> </div>
-					</li> 
-					
-							<input type="submit" value="가입하기"> <!-- onclick="myFunction()" -->
+		<div class="col-md-12">
+				<div class="row">
+					<div class="col-lg-9">
+						<div class="well bs-component">
+							<form class="form-horizontal" action="MemberOk.jsp" method="post" >
+								
+									<legend>회원가입</legend>
+
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">아 이 디</label>
+										<div class="col-lg-4">
+											<input type="text" class="form-control" placeholder="아이디" name="m_memberNo">
+										</div>
+										<div class="col-lg-3">
+											<button type="button" class="btn btn-primary" id="idCheck">중복확인</button>
+										
+										</div>
+										
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">비밀번호</label>
+										<div class="col-lg-7">
+											<input type="password" class="form-control" placeholder="건물주소" name="m_pass">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-lg-3 control-label">비밀번호확인</label>
+										<div class="col-lg-7">
+											<input type="password" class="form-control" placeholder="건물주소">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-lg-3 control-label">이 메 일</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="건물주소" name="m_email">
+										</div>
+										<div class="col-lg-1" id="emailCheck">
+										@
+										</div>
+										<div class="col-lg-2">
+											<input type="text" class="form-control" placeholder="건33물주소">
+										</div>
+										<div class="col-lg-2" id="emailDomain">
+											<select class="form-control" id="select">
+												<option>kosta.com</option>
+												<option>naver.com</option>
+												<option>hanmail.net</option>
+												<option>직접입력</option>
+											</select>
+										</div>
+									</div>
+
+
+
+
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">휴대폰번호</label>
+										<div class="col-lg-7">
+											<div class="col-lg-4 phoneNumfirst">
+												<input type="text" class="form-control" placeholder="010" name="s_mphon1">
+											</div>
+
+											<div class="col-lg-4 phoneNum">
+												<input type="text" class="form-control" placeholder="1234" name="s_mphon2">
+											</div>
+
+											<div class="col-lg-4 phoneNum">
+												<input type="text" class="form-control" placeholder="5678" name="s_mphon3">
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-lg-3 control-label">전화번호</label>
+										<div class="col-lg-7">
+											<div class="col-lg-4 phoneNumfirst">
+												<input type="text" class="form-control" placeholder="010" name="s_phon1">
+											</div>
+
+											<div class="col-lg-4 phoneNum">
+												<input type="text" class="form-control" placeholder="1234" name="s_phon2">
+											</div>
+
+											<div class="col-lg-4 phoneNum">
+												<input type="text" class="form-control" placeholder="5678" name="s_phon3">
+											</div>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-lg-3 control-label">이    름</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="건물주소" name="m_name">
+										</div>
+										
+										<label class="col-lg-1 control-label">나    이</label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="건물주소" name="m_age">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-lg-3 control-label">동 </label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="건물주소" name="m_buildingNo">
+										</div>
+										
+										<label class="col-lg-1 control-label">호 </label>
+										<div class="col-lg-3">
+											<input type="text" class="form-control" placeholder="건물주소" name="m_roomNo">
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<div class="col-lg-6 col-lg-offset-5">
+											<button type="reset" class="btn btn-default">Cancel</button>
+											<button type="submit" class="btn btn-primary">Submit</button>
+										</div>
+									</div>
+								</form>
 							
-						<div class="clear"> </div>
-						
+						</div>
 					</div>
-					<div class="clear"> </div>
-				</ul>
-				<div class="clear"> </div>
-					
-			</form>
-			
-		</div>
+
+				</div>
+			</div>
 			<!-----start-copyright---->
    					<div class="copy-right">
 						<p>Template by <a href="http://w3layouts.com">w3layouts</a></p> 

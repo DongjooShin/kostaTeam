@@ -21,6 +21,7 @@ public class AptService {
 	
 	// 동주
 
+	
 	// 정화
 
 
@@ -32,4 +33,11 @@ public class AptService {
 	// 기대
 
 	// 경운
-}
+	public int insertMemberService(Member member){
+		return memberdao.insertMember(member);
+		
+	}
+	public void aaaa(){
+		System.out.println("test");
+	}
+}	
