@@ -1,5 +1,12 @@
+<%@page import="apt.dao.AptService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	AptService service = AptService.getInstance();
+service.selectmanagementfee();
+
+%>    
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,6 +14,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>sdfdsfsfdsfdsfdf</h1>
+	json이 성공하였다 ㅎㅎ
 </body>
 </html>

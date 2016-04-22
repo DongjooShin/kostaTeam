@@ -3,20 +3,24 @@ package apt.dao;
 import apt.classes.Member;
 
 public class AptService {
-//----------------------Singleton area--------------------------
+	
+	public static ManagementFeeDao mfd;
 	public static MemberDao memberdao; 
 	public static VoteDao votedao;
-	
 	public static AptService service = new AptService();
-//	------------------------------------------------------------
 	
-//------------------getInstance------------------------------	
-	public static AptService getInstance() {
-		votedao = VoteDao.getInstance();
-		memberdao = MemberDao.getInstance();
+	
+	
+	public static AptService getInstance(){
+		mfd=ManagementFeeDao.getInstance();
 		return service;
-	}	
-//---------------------------------------------------------------	
+		
+	}
+	
+	
+	
+	
+	
 	
 	
 	// 동주
@@ -31,6 +35,10 @@ public class AptService {
 	// 경태
 
 	// 기대
+	public void selectmanagementfee(){
+		mfd.selectManagementFee();
+		
+	}
 
 	// 경운
 	public int insertMemberService(Member member){

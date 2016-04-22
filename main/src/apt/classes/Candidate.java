@@ -12,7 +12,14 @@ public class Candidate implements Serializable {
 	private String cd_career;
 	private String cd_promise;
 	private int m_memberNo;
+	private int apt_APTGNo;
 	
+	public int getApt_APTGNo() {
+		return apt_APTGNo;
+	}
+	public void setApt_APTGNo(int apt_APTGNo) {
+		this.apt_APTGNo = apt_APTGNo;
+	}
 	
 	public int getCd_candidateNo() {
 		return cd_candidateNo;
