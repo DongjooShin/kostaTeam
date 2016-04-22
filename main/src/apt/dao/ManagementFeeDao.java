@@ -5,11 +5,9 @@ import java.io.InputStream;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.jdbc.SqlBuilder;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -56,7 +54,6 @@ public class ManagementFeeDao {
 			e.printStackTrace();
 		}
        
-       System.out.println("re");
        
        return jmain;
 

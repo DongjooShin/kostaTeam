@@ -117,11 +117,11 @@
                                  </li>
                               <li id="menu-item-111"
                                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a
-                                 href="sidebar.jsp">부동산 정보</a>
+                                 href="sidebar.jsp">부동산 거래</a>
                                  <ul class="sub-menu">
                                     <li id="menu-item-109"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a
-                                       href="sidebar.jsp">부동산 뉴스</a></li>
+                                       href="aptSale.jsp">부동산 거래</a></li>
                                     <li id="menu-item-108"
                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a
                                        href="sidebar.jsp">아파트 시세</a></li>

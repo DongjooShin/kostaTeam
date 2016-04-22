@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>아파트이미지</h1>
-<!-- imsu333 -->
+	
 </body>
 </html>

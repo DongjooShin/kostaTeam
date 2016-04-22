@@ -6,7 +6,7 @@
 
 <mapper namespace="apt.mapper.Management"> <!-- namespace를 꼭 맞게 써주어야함 -->
    <cache />
-   <select id="selectManagementFee">
+   <select id="selectManagementFee" resultType="ManagementFee">
    	select * from ManagementFee
    
    
