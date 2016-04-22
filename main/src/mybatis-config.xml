@@ -8,6 +8,7 @@
 		<!-- <typeAlias type="kosta.model.Board" alias="Board"/>  -->
 		
 		<typeAlias type="apt.dao.M_signup" alias="M_signup"/>
+		<typeAlias type="apt.classes.ManagementFee" alias="ManagementFee"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -20,8 +21,8 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="apt/xml/M_signup.xml"/>
-		
+		<mapper resource="apt/xml/Apt.xml"/>
+		<mapper resource="apt/xml/ManagementFee.xml"/>
 	</mappers>
 	
 </configuration>

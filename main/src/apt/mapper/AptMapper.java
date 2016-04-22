@@ -1,5 +1,5 @@
 package apt.mapper;
 
-public interface AptMapper {
 
+public interface AptMapper {
 }
