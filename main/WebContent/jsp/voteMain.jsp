@@ -8,10 +8,10 @@
 
 <%
 	AptService aptService = AptService.getInstance();
-	
+	Member m = aptService.selectOneMemberService("tndusdla92");
 	//m = manager, r = resident
-
-//	request.setAttribute("m", m);
+	
+	request.setAttribute("m", m);
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,6 +19,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" href="../css/jeong/vote.css"> 
 </head>
 <body>
 
@@ -37,21 +38,30 @@
 					</form>
 				</c:when>
 				<c:when test="${m.getV_flag() == 2 }">
+					<c:forEach var="n" begin="0" end="">
+						<c:if test="">
+							n++;
+						</c:if>
+					</c:forEach>
 
 				</c:when>
 				<c:when test="${m.getV_flag() == 3 }">
+					<input type="text" value="">
+					<input type="button" value="Close the Election">
 				</c:when>
 				<c:when test="${m.getV_flag() == 4 }">
+					<span class="iGraph"> <span class="gBar"> 
+						<span class="gAction" style="width: 50%"></span>
+					</span> 
+					<span class="gPercent"> </span> 
+					<input type="button" value="Close ths result">
 				</c:when>
 			</c:choose>
 		</c:when>
 
 		<c:otherwise>
 			<!-- case: resident -->
-			<form action="voteCandiRegist.jsp" method="post">
-				<img id="vote_back" alt="" src="../images/jeong/vote_background.jpg"
-					width="500" height="500"> <input type="submit" value="후보자 등록">
-			</form>
+			<form action="voteNowPresi.jsp" method="post"></form>
 		</c:otherwise>
 	</c:choose>
 
