@@ -1,29 +1,3 @@
-
-$(function(){
-	$.ajax({
-		url: 'data/managementFee.jsp',
-		type: 'post',
-		dataType: 'json',
-		success: successHandler,
-		error:function(){
-			alert('데이터가없음');
-		}
-	});
-	function successHandler(data) {
-		$.jqplot('graph', [[['mf_gasAmount', data[0].mf_gasAmount], ['102동', 22], ['103동', 38], ['104동', 30]]], {
-			title: '우리아파트임 ㅎㅎ',
-			series:[{renderer:$.jqplot.BarRenderer}],
-			axes: {
-				xaxis: {
-					renderer: $.jqplot.CategoryAxisRenderer,
-					label: "동이름"
-				},
-				yaxis: {
-					label: ""
-				}
-			}
-		});
-	};
-});
-
-
+p2.pm_clean+p2.pm_general+p2.pm_maintain+p2.pm_liftMaintain+p2.pm_security +p2.
+                    pm_foodWaste +p2.pm_fireInsurance +p2.pm_commission +p2.pm_meeting +p2.pm_publicElectric +p2.pm_liftElectric +p2.
+                    pm_TVFee +p2.pm_disinfection

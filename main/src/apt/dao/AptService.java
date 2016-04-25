@@ -1,6 +1,9 @@
 package apt.dao;
 
+import java.util.List;
+
 import apt.classes.Member;
+import apt.classes.PublicManagementFee;
 
 public class AptService {
 	
@@ -40,6 +43,12 @@ public class AptService {
 	// 기대
 	public Object selectmanagementfee(){
 		return mfd.selectManagementFee();
+	}
+	public Object selectPublicmanage(){
+		return mfd.selectPublicmanage();
+	}
+	public List<PublicManagementFee> selectYearPublicmanage(){
+		return mfd.selectYearPublicmanage();
 	}
 
 	// 경운

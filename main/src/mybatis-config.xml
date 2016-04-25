@@ -12,6 +12,7 @@
 		<typeAlias type="apt.classes.Member" alias="Member"/>
 
 		<typeAlias type="apt.classes.ManagementFee" alias="ManagementFee"/>
+		<typeAlias type="apt.classes.PublicManagementFee" alias="PublicManagementFee"/>
 
 	</typeAliases>
 	
