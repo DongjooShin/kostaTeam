@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="apt.mapper.VoterMapper"> <!-- namespace를 꼭 맞게 써주어야함 -->
+
+	<cache />
+
+	<select id="selectOneMember" parameterType="String" resultType="Member">
+		select * from member where m_memberNo = #{id}
+	</select>
+
+	<select id="selectGroupPresi" resultType="Member">
+		select * from member
+		where m_grade = 3
+	</select>
+
+	<select id="selectBuildingPresi" resultType="Member">
+		select * from member
+		where m_grade = 4
+	</select>
+
+	<select id="selectAllGPreCandi" resultType="Candidate"> 
+	 	select * from Candidate where cd_group = '입주자대표'
+	</select>
+	
+	<update id="levelDownGroupPresi" parameterType="int">
+		update Member set m_grade = 1 
+			where m_memberNo = (select m_memberNo from Candidate where cd_candidateNo = #{cd_candidate})
+	</update>
+</mapper>
+
+
+
+
+
+
+
+

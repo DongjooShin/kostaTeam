@@ -27,7 +27,6 @@
    select count(*) from member where m_memberNo = #{m_memberNo} and m_pass = #{m_pass}
    </select>
    
-   
 </mapper>
 
 

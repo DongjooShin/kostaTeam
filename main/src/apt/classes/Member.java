@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class Member implements Serializable {
 
-
 		private String m_memberNo;
 		private String m_pass;
 		private String m_name;

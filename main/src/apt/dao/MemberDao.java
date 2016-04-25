@@ -1,6 +1,7 @@
 package apt.dao;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -10,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import apt.classes.LoginCheck;
 import apt.classes.Member;
 import apt.mapper.M_signupMapper;
+import apt.mapper.VoterMapper;
 
 public class MemberDao {
 	private static MemberDao memberdao = new MemberDao();
@@ -90,4 +92,6 @@ public class MemberDao {
 		}
 
 	}
+	
+		
 }

@@ -1,6 +1,9 @@
 package apt.dao;
 
 import apt.classes.LoginCheck;
+import java.util.List;
+
+import apt.classes.Candidate;
 import apt.classes.Member;
 
 public class AptService {

@@ -7,12 +7,13 @@
 	<typeAliases>
 		<!-- <typeAlias type="kosta.model.Board" alias="Board"/>  -->
 		
-
 		
 		<typeAlias type="apt.classes.Member" alias="Member"/>
-		<typeAlias type="apt.classes.LoginCheck" alias="LoginCheck"/>
-
 		<typeAlias type="apt.classes.ManagementFee" alias="ManagementFee"/>
+		<typeAlias type="apt.classes.LoginCheck" alias="LoginCheck"/>
+		<typeAlias type="apt.classes.Voter" alias="Voter"/>
+		<typeAlias type="apt.classes.Candidate" alias="Candidate"/>
+		<typeAlias type="apt.classes.PublicManagementFee" alias="PublicManagementFee"/>
 
 	</typeAliases>
 	
@@ -26,10 +27,10 @@
 	</environments>
 	
 	<mappers>
-
 		<mapper resource="apt/mapper/M_signup.xml"/>
 		<mapper resource="apt/xml/Apt.xml"/>
 		<mapper resource="apt/xml/ManagementFee.xml"/>
+		<mapper resource="apt/xml/Voter.xml"/>
 </mappers>
 	
 </configuration>
