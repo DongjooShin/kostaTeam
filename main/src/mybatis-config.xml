@@ -11,8 +11,12 @@
 		<typeAlias type="apt.classes.Member" alias="Member"/>
 		<typeAlias type="apt.classes.ManagementFee" alias="ManagementFee"/>
 
+
 		<typeAlias type="apt.classes.Voter" alias="Voter"/>
 		<typeAlias type="apt.classes.Candidate" alias="Candidate"/>
+
+		<typeAlias type="apt.classes.PublicManagementFee" alias="PublicManagementFee"/>
+
 	</typeAliases>
 	
 	<environments default="development">

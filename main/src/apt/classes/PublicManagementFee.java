@@ -14,9 +14,9 @@ public class PublicManagementFee implements Serializable {
 	private int pm_commission;
 	private int pm_meeting;
 	private int pm_publicElectric;
-	private int liftElectric;
-	private int TVFee;
-	private int disinfection;
+	private int pm_liftElectric;
+	private int pm_TVFee;
+	private int pm_disinfection;
 	private int apt_APTGNo;
 	
 	public int getApt_APTGNo() {
@@ -91,23 +91,23 @@ public class PublicManagementFee implements Serializable {
 	public void setPm_publicElectric(int pm_publicElectric) {
 		this.pm_publicElectric = pm_publicElectric;
 	}
-	public int getLiftElectric() {
-		return liftElectric;
+	public int getPm_liftElectric() {
+		return pm_liftElectric;
 	}
-	public void setLiftElectric(int liftElectric) {
-		this.liftElectric = liftElectric;
+	public void setPm_liftElectric(int pm_liftElectric) {
+		this.pm_liftElectric = pm_liftElectric;
 	}
-	public int getTVFee() {
-		return TVFee;
+	public int getPm_TVFee() {
+		return pm_TVFee;
 	}
-	public void setTVFee(int tVFee) {
-		TVFee = tVFee;
+	public void setPm_TVFee(int pm_TVFee) {
+		this.pm_TVFee = pm_TVFee;
 	}
-	public int getDisinfection() {
-		return disinfection;
+	public int getPm_disinfection() {
+		return pm_disinfection;
 	}
-	public void setDisinfection(int disinfection) {
-		this.disinfection = disinfection;
+	public void setPm_disinfection(int pm_disinfection) {
+		this.pm_disinfection = pm_disinfection;
 	}
 	
 }

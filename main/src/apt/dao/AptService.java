@@ -4,6 +4,7 @@ import java.util.List;
 
 import apt.classes.Candidate;
 import apt.classes.Member;
+import apt.classes.PublicManagementFee;
 
 public class AptService {
 	
@@ -52,9 +53,14 @@ public class AptService {
 	// 경태
 
 	// 기대
-	public void selectmanagementfee(){
-		mfd.selectManagementFee();
-		
+	public Object selectmanagementfee(){
+		return mfd.selectManagementFee();
+	}
+	public Object selectPublicmanage(){
+		return mfd.selectPublicmanage();
+	}
+	public List<PublicManagementFee> selectYearPublicmanage(){
+		return mfd.selectYearPublicmanage();
 	}
 
 	// 경운
