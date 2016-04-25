@@ -11,12 +11,21 @@
    <insert id="insertMember" parameterType="member">
 
       insert into member(
-      m_memberNo,m_pass,m_buildingNo,m_roomNo,m_name,m_age,m_homeTel,m_tel)
+      m_memberNo,m_pass,m_buildingNo,m_roomNo,m_name,m_age,m_homeTel,m_tel,m_email,apt_APTGNo,v_flag)
       
       values(
-      #{m_memberNo},#{m_pass},#{m_buildingNo},#{m_roomNo},#{m_name},#{m_age},#{m_homeTel},#{m_tel}
+      #{m_memberNo},#{m_pass},#{m_buildingNo},#{m_roomNo},#{m_name},#{m_age},#{m_homeTel},#{m_tel},#{m_email},#{apt_APTGNo},#{v_flag}
       )
    </insert>
+   
+   <select id="checkMemberId" parameterType="String" resultType="Integer">
+   select count(*) from member where m_memberNo = #{m_memberNo}
+   								
+   </select>
+   
+   <select id="checkMemberPass" parameterType="LoginCheck" resultType="Integer">
+   select count(*) from member where m_memberNo = #{m_memberNo} and m_pass = #{m_pass}
+   </select>
    
    
 </mapper>

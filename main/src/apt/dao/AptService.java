@@ -1,5 +1,6 @@
 package apt.dao;
 
+import apt.classes.LoginCheck;
 import apt.classes.Member;
 
 public class AptService {
@@ -10,9 +11,14 @@ public class AptService {
 	public static AptService service = new AptService();
 	
 	
-	
 	public static AptService getInstance(){
 		mfd=ManagementFeeDao.getInstance();
+		return service;
+		
+	}
+	
+	public static AptService getMemberInstance(){
+		memberdao=MemberDao.getInstance();
 		return service;
 		
 	}
@@ -24,7 +30,21 @@ public class AptService {
 	
 	
 	// 동주
-
+	public void insertMemberService(Member member){
+		System.out.println("test2");
+	memberdao.insertMember(member);
+		
+		System.out.println("test5");
+	}
+	
+	public int checkMemberIdService(String m_memberNo){
+		
+		return memberdao.checkMemberId(m_memberNo);
+	}
+	
+	public int checkLoginAndPassSerice(LoginCheck loginCheck){
+		return memberdao.checkLoginAndPass(loginCheck);
+	}
 	
 	// 정화
 
@@ -41,11 +61,6 @@ public class AptService {
 	}
 
 	// 경운
-	public int insertMemberService(Member member){
-		return memberdao.insertMember(member);
-		
-	}
-	public void aaaa(){
-		System.out.println("test");
-	}
+	
+	
 }	

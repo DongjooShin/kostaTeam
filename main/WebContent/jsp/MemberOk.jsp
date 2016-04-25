@@ -7,13 +7,15 @@
 	<jsp:useBean id="member" class="apt.classes.Member"></jsp:useBean>
  	<jsp:setProperty property="*" name="member"/>
 <%
+	
 	member.sumPhoneNum();
 	member.sumTellNum();
 	
-	AptService aptService = AptService.getInstance();
 	
+	AptService aptService = AptService.getMemberInstance();
+
 	aptService.insertMemberService(member);
-	aptService.aaaa();
+	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

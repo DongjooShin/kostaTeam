@@ -10,6 +10,7 @@
 
 		
 		<typeAlias type="apt.classes.Member" alias="Member"/>
+		<typeAlias type="apt.classes.LoginCheck" alias="LoginCheck"/>
 
 		<typeAlias type="apt.classes.ManagementFee" alias="ManagementFee"/>
 
