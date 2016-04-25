@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class Member implements Serializable {
 
-
-		private int v_flag=1;
-	
 		private String m_memberNo;
 		private String m_pass;
 		private String m_name;
@@ -21,6 +18,7 @@ public class Member implements Serializable {
 		private String s_mphon2;
 		private String s_mphon3;
 		
+		private int v_flag;	//case:manager
 		private int m_buildingNo;
 		private int m_roomNo;
 		private int m_age;
@@ -33,7 +31,12 @@ public class Member implements Serializable {
 			String num1 = getS_mphon1();
 			String num2 = getS_mphon2();
 			String num3 = getS_mphon3();
-			int num =Integer.parseInt((num1 + num2 + num3));
+			int num = 1;
+			try {
+				num =Integer.parseInt((num1 + num2 + num3));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			setM_tel(num);
 			
 		}
@@ -42,7 +45,13 @@ public class Member implements Serializable {
 			String num1 = getS_phon1();
 			String num2 = getS_phon2();
 			String num3 = getS_phon3();
-			int num =Integer.parseInt((num1 + num2 + num3));
+			int num = 1;
+			try {
+				num =Integer.parseInt((num1 + num2 + num3));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
 			setM_homeTel(num);
 			
 		}
@@ -167,7 +176,6 @@ public class Member implements Serializable {
 		public void setApt_APTGNo(int apt_APTGNo) {
 			this.apt_APTGNo = apt_APTGNo;
 		}
-
 		public int getV_flag() {
 			return v_flag;
 		}
@@ -175,8 +183,7 @@ public class Member implements Serializable {
 		public void setV_flag(int v_flag) {
 			this.v_flag = v_flag;
 		}
-		
-		
+
 		
 	
 	
