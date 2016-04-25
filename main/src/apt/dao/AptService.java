@@ -42,10 +42,10 @@ public class AptService {
 	public List<Member> selectBuildingPresiService(){
 		return votedao.selectBuildingPresi();
 	}
-	public List<Candidate> selectAllGPreCandiService(){
-		return votedao.selectAllGPreCandi();
+	public List<Candidate> selectAllEachCandiService(String c){
+		return votedao.selectAllEachCandi(c);
 	}
-	public void levelDownGroupPresiService(int cd_candidateNo){
+	public void levelDownGroupPresiService(String cd_candidateNo){
 		votedao.levelDownGroupPresi(cd_candidateNo);
 	}
 	// 수연

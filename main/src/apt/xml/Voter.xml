@@ -16,18 +16,19 @@
 		where m_grade = 3
 	</select>
 
+	<select id="selectAllEachCandi" parameterType="String" resultType="Candidate"> 
+	 	select * from candidate where cd_group = #{c}
+	</select> 
+	
+	
 	<select id="selectBuildingPresi" resultType="Member">
 		select * from member
 		where m_grade = 4
 	</select>
-
-	<select id="selectAllGPreCandi" resultType="Candidate"> 
-	 	select * from Candidate where cd_group = '입주자대표'
-	</select>
 	
-	<update id="levelDownGroupPresi" parameterType="int">
+	<update id="levelDownGroupPresi" parameterType="String">
 		update Member set m_grade = 1 
-			where m_memberNo = (select m_memberNo from Candidate where cd_candidateNo = #{cd_candidate})
+			where m_memberNo = (select m_memberNo from Candidate where candidateNo = #{cd_candidate})
 	</update>
 </mapper>
 

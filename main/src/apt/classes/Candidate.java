@@ -5,13 +5,13 @@ import java.io.Serializable;
 public class Candidate implements Serializable {
 	private int cd_candidateNo;
 	private int cd_voteHit;
-	private int cd_group;
+	private String cd_group;
 	private int cd_symbol;
 	private String cd_eduLevel;
 	private String cd_job;
 	private String cd_career;
 	private String cd_promise;
-	private int m_memberNo;
+	private String m_memberNo;
 	private int apt_APTGNo;
 	
 	public int getApt_APTGNo() {
@@ -33,10 +33,10 @@ public class Candidate implements Serializable {
 	public void setCd_voteHit(int cd_voteHit) {
 		this.cd_voteHit = cd_voteHit;
 	}
-	public int getCd_group() {
+	public String getCd_group() {
 		return cd_group;
 	}
-	public void setCd_group(int cd_group) {
+	public void setCd_group(String cd_group) {
 		this.cd_group = cd_group;
 	}
 	public int getCd_symbol() {
@@ -69,10 +69,10 @@ public class Candidate implements Serializable {
 	public void setCd_promise(String cd_promise) {
 		this.cd_promise = cd_promise;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	

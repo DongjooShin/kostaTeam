@@ -75,12 +75,13 @@ public class VoteDao {
 		return list; 
 	 }
 
-	public List<Candidate> selectAllGPreCandi(){
+	public List<Candidate> selectAllEachCandi(String c){
 		List<Candidate> list=null;
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		
 		try {
-			list = sqlSession.getMapper(VoterMapper.class).selectAllGPreCandi();
+			
+			list = sqlSession.getMapper(VoterMapper.class).selectAllEachCandi(c);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -89,15 +90,15 @@ public class VoteDao {
 		return list;
 	}
 	
-	public void levelDownGroupPresi(int cd_candidate){
+	public void levelDownGroupPresi(String cd_candidate){
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re=0;
-		try {
+		try { 
 			re = sqlSession.getMapper(VoterMapper.class).levelDownGroupPresi(cd_candidate); 
 			if(re>0){
-				
+				   sqlSession.commit();
 			}else{
-				
+				sqlSession.rollback();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
