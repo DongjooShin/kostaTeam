@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Member implements Serializable {
 
 
-	private int v_flag=1;	//case:manager
+		private int v_flag=1;
 	
 		private String m_memberNo;
 		private String m_pass;
@@ -167,8 +167,16 @@ public class Member implements Serializable {
 		public void setApt_APTGNo(int apt_APTGNo) {
 			this.apt_APTGNo = apt_APTGNo;
 		}
-		
 
+		public int getV_flag() {
+			return v_flag;
+		}
+
+		public void setV_flag(int v_flag) {
+			this.v_flag = v_flag;
+		}
+		
+		
 		
 	
 	

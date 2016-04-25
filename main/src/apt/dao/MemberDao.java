@@ -1,6 +1,7 @@
 package apt.dao;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -9,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import apt.classes.Member;
 import apt.mapper.M_signupMapper;
+import apt.mapper.VoterMapper;
 
 public class MemberDao {
 	public static MemberDao memberdao = new MemberDao();
@@ -53,17 +55,5 @@ public class MemberDao {
 		return re;
 	}
 	
-	public Member selectOneMember(String id){
-		Member m = new Member();
-		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		
-		try {
-			m = sqlSession.getMapper(M_signupMapper.class).selectOneMember(id);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			sqlSession.close();
-		}
-		return m;
-	}
 }

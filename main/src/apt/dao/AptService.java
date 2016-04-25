@@ -1,5 +1,8 @@
 package apt.dao;
 
+import java.util.List;
+
+import apt.classes.Candidate;
 import apt.classes.Member;
 
 public class AptService {
@@ -30,9 +33,20 @@ public class AptService {
 	// 정화
 
 	public Member selectOneMemberService(String id){
-		return memberdao.selectOneMember(id);
+		return votedao.selectOneMember(id);
 	}
-
+	public Member selectGroupPresiService(){
+		return votedao.selectGroupPresi();
+	}
+	public List<Member> selectBuildingPresiService(){
+		return votedao.selectBuildingPresi();
+	}
+	public List<Candidate> selectAllGPreCandiService(){
+		return votedao.selectAllGPreCandi();
+	}
+	public void levelDownGroupPresiService(int cd_candidateNo){
+		votedao.levelDownGroupPresi(cd_candidateNo);
+	}
 	// 수연
 
 	// 경태

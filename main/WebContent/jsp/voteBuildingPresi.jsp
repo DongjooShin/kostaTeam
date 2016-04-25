@@ -4,22 +4,19 @@
 	pageEncoding="EUC-KR"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <%
 	AptService aptService = AptService.getInstance();
 	Member m = aptService.selectOneMemberService("tndusdla92");
 	//m = manager, r = resident
-	
+
 	request.setAttribute("m", m);
 %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/jeong/vote.css"> 
 </head>
 <body>
 
@@ -31,10 +28,9 @@
 			<!-- case: manager -->
 			<c:choose>
 				<c:when test="${m.getV_flag() == 1 }">
-					<form action="voteCandiRegist.jsp" method="post">
-						<div id="vote_back">
-							<input type="submit" value="후보자 등록">
-						</div>
+					<form class="vote_back" action="voteCandiRegist.jsp" method="post">
+							<input id="CandiRegiButton" type="submit" value="후보자 등록">
+							<input type="hidden" name="m_id" value="${m.getM_memberNo() }">
 					</form>
 				</c:when>
 				<c:when test="${m.getV_flag() == 2 }">
@@ -61,9 +57,42 @@
 
 		<c:otherwise>
 			<!-- case: resident -->
-			<form action="voteNowPresi.jsp" method="post"></form>
+			<c:choose>
+				<c:when test="${m.getV_flag() == 1 }">		
+					<table>
+					<tr><td></td><td rowspan="2"></td><td></td></tr>
+					<tr>	
+					<td><%=m.getM_buildingNo()%> 동  <%=m.getM_roomNo() %> 호  <%=m.getM_name() %> </td>
+					<td><%=m.getM_buildingNo()%> 동  <%=m.getM_roomNo() %> 호  <%=m.getM_name() %> </td>
+					</tr>	
+					</table>
+				</c:when>	
+				<c:when test="${m.getV_flag() == 2 }">
+				
+				<h1>입주자대표</h1><br><br>
+				<table>
+				<tr><td><img alt="" src=""></td>
+				<td><img alt="" src=""></td>
+				<td><img alt="" src=""></td></tr>
+				<tr><td>기호 <%= %>번</td><td>기호 <%= %>번</td><td>기호 <%= %>번</td></tr>
+				<tr><td><%= %></td><td><%= %></td><td><%= %></td></tr>
+				<tr><td><input type="checkbox"></td>
+				<td><input type="checkbox"></td>
+				<td><input type="checkbox"></td>
+				</tr>
+				</table>
+				</c:when>
+				
+				<c:when test="${m.getV_flag() == 3 }">
+				<h1> 우리 단지의 투표가 진행중입니다.</h1><br><br>
+				</c:when>
+				<c:when test="${m.getV_flag() == 4 }">
+				<h1>투표가 종료되었습니다.</h1>
+				</c:when>
+			</c:choose>
 		</c:otherwise>
 	</c:choose>
+
 
 
 
