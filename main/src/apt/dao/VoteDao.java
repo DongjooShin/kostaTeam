@@ -90,11 +90,11 @@ public class VoteDao {
 		return list;
 	}
 	
-	public void levelDownGroupPresi(String cd_candidate){
+	public void levelDownGroupPresi(String candi){
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		int re=0;
 		try { 
-			re = sqlSession.getMapper(VoterMapper.class).levelDownGroupPresi(cd_candidate); 
+			re = sqlSession.getMapper(VoterMapper.class).levelDownGroupPresi(candi); 
 			if(re>0){
 				   sqlSession.commit();
 			}else{

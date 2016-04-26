@@ -10,6 +10,7 @@ public class ManagementFee implements Serializable {
 	private int mf_electricAmount;
 	private int mf_gasAmount;
 	private int mf_waterAmount;
+	private String mf_date;
 	private String m_memberNo;
 	
 	
@@ -61,5 +62,12 @@ public class ManagementFee implements Serializable {
 	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
+	public String getMf_date() {
+		return mf_date;
+	}
+	public void setMf_date(String mf_date) {
+		this.mf_date = mf_date;
+	}
+
 	
 }

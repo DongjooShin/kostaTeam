@@ -10,5 +10,5 @@ public interface VoterMapper {
 	public Member selectGroupPresi();
 	public List<Member> selectBuildingPresi();
 	public List<Candidate> selectAllEachCandi(String c);
-	public int levelDownGroupPresi(String cd_candidate);
+	public int levelDownGroupPresi(String candi);
 }

@@ -91,6 +91,7 @@ public class PublicManagementFee implements Serializable {
 	public void setPm_publicElectric(int pm_publicElectric) {
 		this.pm_publicElectric = pm_publicElectric;
 	}
+
 	public int getPm_liftElectric() {
 		return pm_liftElectric;
 	}
@@ -109,5 +110,6 @@ public class PublicManagementFee implements Serializable {
 	public void setPm_disinfection(int pm_disinfection) {
 		this.pm_disinfection = pm_disinfection;
 	}
+	
 	
 }

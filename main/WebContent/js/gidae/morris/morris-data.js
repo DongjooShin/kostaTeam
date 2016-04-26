@@ -13,7 +13,6 @@ $(function() {
 		}
 	});
 	function successHandler(data) {
-		var list = data;
 
 		   Morris.Line({
 		        // ID of the element in which to draw the chart.

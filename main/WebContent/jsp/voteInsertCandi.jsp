@@ -1,19 +1,10 @@
-<%@page import="apt.dao.AptService"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     
     <%
-    String no = request.getParameter("gpm_no");
-   
-    AptService aptService= AptService.getInstance();
     
-
-    aptService.levelDownGroupPresiService(no); 
-     
-    response.sendRedirect("voteGroupPresiRegists.jsp");
-
-
-
+    
+    
     %>
     
     
@@ -25,5 +16,4 @@
 </head>
 <body>
 
-</body>
 </html>
