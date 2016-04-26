@@ -37,7 +37,8 @@
 <link href="../css/bootstrap.min.css" rel ="stylesheet">
 <script type="text/javascript">
 	function fn_insertForm() {
-		$('.insertForm').prepend('<form action="voteInsertOk.jsp" method="post"><table border="1px"><tr><td>입주민 선택</td><td></td></tr><tr><td>이미지파일</td></tr>'
+		$('.insertForm').prepend('<form action="voteInsertOk.jsp" method="post"><table border="1px"><tr><td>입주민 선택</td>'+
+				'<td><></td></tr><tr><td>이미지파일</td></tr>'
 				+'<tr><td>기호</td><td><input type="text" name="new_symbol"></td></tr>'+
 				'<tr><td>학력</td><td><input type="text" name="new_eduLevel"></td></tr>'+
 				'<tr><td>직업</td><td><input type="text" name="new_job"></td></tr><tr><td colspan="2">경력</td></tr>'
