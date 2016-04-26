@@ -9,11 +9,11 @@ public class QnA implements Serializable {
 	private String q_email;
 	private String q_title;
 	private String q_content;
-	private Timestamp q_date;
+	private String q_date;
 	private String q_fileName;
 	private int q_ref;
 	private int q_state;
-	private int m_memberNo;
+	private String m_memberNo;
 	
 	
 	public int getQ_QnANo() {
@@ -46,10 +46,10 @@ public class QnA implements Serializable {
 	public void setQ_content(String q_content) {
 		this.q_content = q_content;
 	}
-	public Timestamp getQ_date() {
+	public String getQ_date() {
 		return q_date;
 	}
-	public void setQ_date(Timestamp q_date) {
+	public void setQ_date(String q_date) {
 		this.q_date = q_date;
 	}
 	public String getQ_fileName() {
@@ -70,10 +70,10 @@ public class QnA implements Serializable {
 	public void setQ_state(int q_state) {
 		this.q_state = q_state;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	

@@ -8,7 +8,7 @@ public class Message implements Serializable {
 	private String mg_from;
 	private String mg_to;
 	private String mg_content;
-	private Timestamp mg_date;
+	private String mg_date;
 	private char mg_state;
 	private int m_memberNo;
 	
@@ -37,10 +37,10 @@ public class Message implements Serializable {
 	public void setMg_content(String mg_content) {
 		this.mg_content = mg_content;
 	}
-	public Timestamp getMg_date() {
+	public String getMg_date() {
 		return mg_date;
 	}
-	public void setMg_date(Timestamp mg_date) {
+	public void setMg_date(String mg_date) {
 		this.mg_date = mg_date;
 	}
 	public char getMg_state() {

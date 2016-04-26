@@ -6,12 +6,12 @@ import java.sql.Timestamp;
 public class Transactions implements Serializable {
 	private int t_transactionsNo;
 	private String t_title;
-	private Timestamp t_date;
+	private String t_date;
 	private String t_content;
 	private int t_hit;
 	private String t_imageName;
 	private int apt_APTGNo;
-	private int m_memberNo;
+	private String m_memberNo;
 	
 	public int getT_transactionsNo() {
 		return t_transactionsNo;
@@ -25,10 +25,10 @@ public class Transactions implements Serializable {
 	public void setT_title(String t_title) {
 		this.t_title = t_title;
 	}
-	public Timestamp getT_date() {
+	public String getT_date() {
 		return t_date;
 	}
-	public void setT_date(Timestamp t_date) {
+	public void setT_date(String t_date) {
 		this.t_date = t_date;
 	}
 	public String getT_content() {
@@ -55,10 +55,10 @@ public class Transactions implements Serializable {
 	public void setApt_APTGNo(int apt_APTGNo) {
 		this.apt_APTGNo = apt_APTGNo;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	

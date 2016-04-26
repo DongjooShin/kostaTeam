@@ -1,12 +1,18 @@
 package apt.mapper;
 
-import org.apache.ibatis.session.RowBounds;
 
-import apt.dao.M_signup;
+
+import apt.classes.LoginCheck;
+import apt.classes.Member;
+
 
 public interface M_signupMapper {
 
-	public int insertBoard(M_signup m_signup);
+	public int insertMember(Member member);
+	public Integer checkMemberId(String m_memberNo);
+	public Integer checkMemberPass(LoginCheck loginCheck);
+
+
 	
 	
 }

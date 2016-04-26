@@ -9,7 +9,7 @@ public class Appropriation implements Serializable {
 	private int a_usedAmount;
 	private String a_usedList;	//where we used.
 	private int a_thisAppro;		//this month's money
-	private Timestamp a_date;
+	private String a_date;
 	private int apt_APTGNo;
 	
 	
@@ -40,10 +40,10 @@ public class Appropriation implements Serializable {
 	public void setA_thisAppro(int a_thisAppro) {
 		this.a_thisAppro = a_thisAppro;
 	}
-	public Timestamp getA_date() {
+	public String getA_date() {
 		return a_date;
 	}
-	public void setA_date(Timestamp a_date) {
+	public void setA_date(String a_date) {
 		this.a_date = a_date;
 	}
 	public int getApt_APTGNo() {

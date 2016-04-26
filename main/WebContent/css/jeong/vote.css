@@ -1,0 +1,27 @@
+@CHARSET "EUC-KR";
+
+.vote_back{
+	background-image:url("../../images/jeong/vote_background.jpg");
+	width: 700px;
+	height:700px;
+	
+}
+
+#CandiRegiButton{
+	
+	width: 200px;
+	height: 80px;
+	border: 0px solid #ffffff;
+	background-image: url("../../images/jeong/button_img.jpg");	
+}
+
+div #outline{
+	
+	border: 0.5px solid #71c9fd;
+	background-color: #c0e7fe;
+}
+
+.candidatelist{
+	padding: 2px;
+
+}

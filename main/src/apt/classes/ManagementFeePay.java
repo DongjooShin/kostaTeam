@@ -6,12 +6,18 @@ import java.sql.Timestamp;
 public class ManagementFeePay implements Serializable {
 	private int p_payNo;
 	private int p_process;
-	private Timestamp p_date;
+	private String p_date;
 	private int p_amount;
 	private String p_means;
 	private int mf_managementFeeNo;
+	private int apt_APTGNo;
 	
-	
+	public int getApt_APTGNo() {
+		return apt_APTGNo;
+	}
+	public void setApt_APTGNo(int apt_APTGNo) {
+		this.apt_APTGNo = apt_APTGNo;
+	}
 	public int getP_payNo() {
 		return p_payNo;
 	}
@@ -24,10 +30,10 @@ public class ManagementFeePay implements Serializable {
 	public void setP_process(int p_process) {
 		this.p_process = p_process;
 	}
-	public Timestamp getP_date() {
+	public String getP_date() {
 		return p_date;
 	}
-	public void setP_date(Timestamp p_date) {
+	public void setP_date(String p_date) {
 		this.p_date = p_date;
 	}
 	public int getP_amount() {

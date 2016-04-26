@@ -6,8 +6,6 @@ public class APTGroup implements Serializable {
 	private int apt_APTGNo;
 	private int apt_price;
 	private int apt_realFamilyNum;
-	private int pm_publicFeeNo;		//this is date number
-	
 	
 	public int getApt_APTGNo() {
 		return apt_APTGNo;
@@ -27,12 +25,5 @@ public class APTGroup implements Serializable {
 	public void setApt_realFamilyNum(int apt_realFamilyNum) {
 		this.apt_realFamilyNum = apt_realFamilyNum;
 	}
-	public int getPm_publicFeeNo() {
-		return pm_publicFeeNo;
-	}
-	public void setPm_publicFeeNo(int pm_publicFeeNo) {
-		this.pm_publicFeeNo = pm_publicFeeNo;
-	}
-	
-	
+
 }

@@ -1,0 +1,38 @@
+.sub-menu1{
+   display: inline;
+   width: 250px;
+   margin-right: 20px;
+}
+
+.sub-menu1 li{
+
+   display: inline;
+   padding-left: 10px;
+}
+.sub-menu1 li a{
+   color: black;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.search-wrap{
+   display: inline;
+   width: 250px;
+}
+#menu-item-9, #menu-item-254, #menu-item-105, #menu-item-52, #menu-item-111{
+	height: 45px;
+}
+#header-right-sidebar{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+#site-navigation{
+	padding: 5px 40px 20px 0;
+}
+#search{
+	height: 30px;
+}
+#searchBtn{
+	height: 30px;
+	padding-top: 2px;
+}
