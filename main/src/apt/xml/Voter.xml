@@ -28,7 +28,7 @@
 	
 	<update id="levelDownGroupPresi" parameterType="String">
 		update Member set m_grade = 1 
-			where m_memberNo = (select m_memberNo from Candidate where candidateNo = #{cd_candidate})
+			where m_memberNo = #{candi}
 	</update>
 </mapper>
 
