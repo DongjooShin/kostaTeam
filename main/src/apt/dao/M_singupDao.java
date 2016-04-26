@@ -42,7 +42,7 @@ public class M_singupDao {
 	}
 	
 	public int insertBoard(M_signup M_signup) {
-
+		
 		int re = -1;
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 

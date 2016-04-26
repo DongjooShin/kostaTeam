@@ -11,12 +11,13 @@ public class Member implements Serializable {
 	private String m_name;
 	private String m_email;
 	private int m_grade;
-	private String m_addr;
+	//private String m_addr;
 	private String m_homeTel;
 	private String m_tel;
 	private int apt_APTGNo;
+	private int v_flag=1;	
 	
-	private int v_flag=1;	//case:manager
+	//case:manager
 	//1: there is no election. candidate register button is here.
 	//2: manager is ongoing to put candidate. there are modify and registry button.
 	//3: election is registered. there is image that vote is processing
@@ -42,7 +43,7 @@ public class Member implements Serializable {
 		this.m_name = m_name;
 		this.m_email = m_email;
 		this.m_grade = m_grade;
-		this.m_addr = m_addr;
+		//this.m_addr = m_addr;
 		this.m_homeTel = m_homeTel;
 		this.m_tel = m_tel;
 		this.apt_APTGNo = apt_APTGNo;
@@ -99,12 +100,12 @@ public class Member implements Serializable {
 	public void setM_grade(int m_grade) {
 		this.m_grade = m_grade;
 	}
-	public String getM_addr() {
-		return m_addr;
-	}
-	public void setM_addr(String m_addr) {
-		this.m_addr = m_addr;
-	}
+//	public String getM_addr() {
+//		return m_addr;
+//	}
+//	public void setM_addr(String m_addr) {
+//		this.m_addr = m_addr;
+//	}
 	public String getM_homeTel() {
 		return m_homeTel;
 	}
