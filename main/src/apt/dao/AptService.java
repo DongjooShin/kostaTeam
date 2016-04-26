@@ -15,27 +15,18 @@ public class AptService {
 	
 	
 	public static AptService getInstance(){
+		votedao = VoteDao.getInstance();
+		memberdao = MemberDao.getInstance();
 		mfd=ManagementFeeDao.getInstance();
 		return service;
 		
 	}
 	
-	public static AptService getMemberInstance(){
-		memberdao=MemberDao.getInstance();
-		return service;
-		
-	}
-	
-	
-	
-	
-	
-	
 	
 	// 동주
 	public void insertMemberService(Member member){
 		System.out.println("test2");
-	memberdao.insertMember(member);
+		memberdao.insertMember(member);
 		
 		System.out.println("test5");
 	}
@@ -64,8 +55,8 @@ public class AptService {
 	public List<Candidate> selectAllEachCandiService(String c){
 		return votedao.selectAllEachCandi(c);
 	}
-	public void levelDownGroupPresiService(String cd_candidateNo){
-		votedao.levelDownGroupPresi(cd_candidateNo);
+	public void levelDownGroupPresiService(String candi){
+		votedao.levelDownGroupPresi(candi);
 	}
 
 	// 수연
