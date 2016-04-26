@@ -7,9 +7,9 @@
     <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     <%
 	AptService service = AptService.getInstance();
-    List list=service.selectYearPublicmanage(); 
+    List list=service.selectYearPublicmanage();
     request.setAttribute("p", list.get(0));
-    request.setAttribute("p2", list.get(1)); 
+    request.setAttribute("p2", list.get(1));
 	%>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -17,10 +17,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link class="include" rel="stylesheet" type="text/css" href="jquery.jqplot.min.css" />
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/gidae/jquery.jqplot.min.js"></script>
-<script type="text/javascript" src="js/gidae/bargraph.js"></script>
-<script type="text/javascript" src="plugins/gidae/jqplot.categoryAxisRenderer.min.js"></script>
-<script type="text/javascript" src="plugins/gidae/jqplot.pointLabels.min.js"></script>
+<script type="text/javascript" src="../js/gidae/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="../js/gidae/bargraph.js"></script>
+<script type="text/javascript" src="../plugins/gidae/jqplot.categoryAxisRenderer.min.js"></script>
+<script type="text/javascript" src="../plugins/gidae/jqplot.pointLabels.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -31,23 +31,23 @@
 
 
 	    <!-- Bootstrap Core CSS -->
-    <link href="css/gidae/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/gidae/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/gidae/sb-admin.css" rel="stylesheet">
+    <link href="../css/gidae/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/gidae/plugins/morris.css" rel="stylesheet">
+    <link href="../css/gidae/plugins/morris.css" rel="stylesheet">
 	    <!-- jQuery Version 1.11.0 -->
-    <script src="js/gidae/jquery-1.11.0.js"></script>
+    <script src="../js/gidae/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/gidae/bootstrap.min.js"></script>
+    <script src="../js/gidae/bootstrap.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/gidae/morris/raphael.min.js"></script>
-    <script src="js/gidae/morris/morris.min.js"></script>
-    <script src="js/gidae/morris/morris-data.js"></script>
+    <script src="../js/gidae/morris/raphael.min.js"></script>
+    <script src="../js/gidae/morris/morris.min.js"></script>
+    <script src="../js/gidae/morris/morris-data.js"></script>
 </head>
 <body>
 
