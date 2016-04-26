@@ -15,6 +15,25 @@ public class Candidate implements Serializable {
 	private int apt_APTGNo;
 	private String cd_imageName;
 	
+	
+	public Candidate() {
+		super();
+	}
+	public Candidate(int candidateNo, String cd_group, int cd_symbol, String cd_eduLevel, String cd_job,
+			String cd_career, String cd_promise, String m_memberNo, int apt_APTGNo, String cd_imageName) {
+		super();
+		this.candidateNo = candidateNo;
+		this.cd_group = cd_group;
+		this.cd_symbol = cd_symbol;
+		this.cd_eduLevel = cd_eduLevel;
+		this.cd_job = cd_job;
+		this.cd_career = cd_career;
+		this.cd_promise = cd_promise;
+		this.m_memberNo = m_memberNo;
+		this.apt_APTGNo = apt_APTGNo;
+		this.cd_imageName = cd_imageName;
+		this.cd_voteHit=0;
+	}
 	public String getCd_imageName() {
 		return cd_imageName;
 	}

@@ -30,6 +30,14 @@
 		update Member set m_grade = 1 
 			where m_memberNo = #{candi}
 	</update>
+	
+	<select id="searchSymbol" parameterType="int" resultType="Integer">
+		select cd_symbol from candidate where cd_symbol == #{s} 
+	</select>
+	
+	<select id="maxCandiNo" resultType="int">
+		select max(candidateNo) from candidate
+	</select>
 </mapper>
 
 

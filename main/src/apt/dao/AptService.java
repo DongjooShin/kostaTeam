@@ -50,9 +50,6 @@ public class AptService {
 	
 	// 정화
 
-   
-   
-   // 동주
 
 	public Member selectOneMemberService(String id){
 		return votedao.selectOneMember(id);
@@ -69,22 +66,23 @@ public class AptService {
 	public void levelDownGroupPresiService(String candi){
 		votedao.levelDownGroupPresi(candi);
 	}
-
+	public void levelDownGroupPresiService(int cd_candidateNo){
+		  
+      votedao.levelDownGroupPresi(Integer.toString(cd_candidateNo));
+    }
+	public Integer searchSymbolService(int s){
+		return votedao.searchSymbol(s);
+	}
+	public int maxCandiNoService(){
+		return votedao.maxCandiNo();
+	}
 	// 수연
 
    
    public Object selectPublicmanageServer(){
 	   return mfd.selectPublicmanage();
    }
-   // 정화
-  public void levelDownGroupPresiService(int cd_candidateNo){
-	  
-      votedao.levelDownGroupPresi(Integer.toString(cd_candidateNo));
-   }
    
-   
-   // 수연
-
    // 경태
 
    // 기대
