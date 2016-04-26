@@ -68,8 +68,6 @@ public class ManagementFee implements Serializable {
 	public void setMf_date(String mf_date) {
 		this.mf_date = mf_date;
 	}
-	
-	
 
 	
 }

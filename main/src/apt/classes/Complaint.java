@@ -9,8 +9,15 @@ public class Complaint implements Serializable {
 	private String cp_content;
 	private String cp_state;
 	private int cp_ref;
-	private int m_memberNo;
+	private String m_memberNo;
+	private int apt_APTGNo;
 	
+	public int getApt_APTGNo() {
+		return apt_APTGNo;
+	}
+	public void setApt_APTGNo(int apt_APTGNo) {
+		this.apt_APTGNo = apt_APTGNo;
+	}
 	
 	public int getCp_complaintNo() {
 		return cp_complaintNo;
@@ -48,10 +55,10 @@ public class Complaint implements Serializable {
 	public void setCp_ref(int cp_ref) {
 		this.cp_ref = cp_ref;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	

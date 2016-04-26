@@ -6,12 +6,12 @@ import java.sql.Timestamp;
 public class GroupNotice implements Serializable {
 	private int g_groupNoticeNo;
 	private String g_title;
-	private Timestamp g_date;
+	private String g_date;
 	private String g_content;
 	private int g_hit;
 	private String g_fileName;
 	private int apt_APTGNo;
-	private int m_memberNo;
+	private String m_memberNo;
 	
 	
 	public int getG_groupNoticeNo() {
@@ -26,10 +26,10 @@ public class GroupNotice implements Serializable {
 	public void setG_title(String g_title) {
 		this.g_title = g_title;
 	}
-	public Timestamp getG_date() {
+	public String getG_date() {
 		return g_date;
 	}
-	public void setG_date(Timestamp g_date) {
+	public void setG_date(String g_date) {
 		this.g_date = g_date;
 	}
 	public String getG_content() {
@@ -56,10 +56,10 @@ public class GroupNotice implements Serializable {
 	public void setApt_APTGNo(int apt_APTGNo) {
 		this.apt_APTGNo = apt_APTGNo;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	

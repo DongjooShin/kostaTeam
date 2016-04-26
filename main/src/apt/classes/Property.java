@@ -18,7 +18,7 @@ public class Property {
 	private String pr_company;
 	private String pr_imageName;
 	private String pr_content;
-	private int m_memberNo;
+	private String m_memberNo;
 	
 	
 	public int getPr_propertyNo() {
@@ -123,10 +123,10 @@ public class Property {
 	public void setPr_content(String pr_content) {
 		this.pr_content = pr_content;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 

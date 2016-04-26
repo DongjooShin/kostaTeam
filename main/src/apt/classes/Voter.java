@@ -6,8 +6,15 @@ public class Voter implements Serializable {
 	private int v_voterNo;
 	private int v_buildingNo;
 	private int v_roomNo;
-	private int m_memberNo;
+	private String m_memberNo;
+	private int apt_APTGNo;
 	
+	public int getApt_APTGNo() {
+		return apt_APTGNo;
+	}
+	public void setApt_APTGNo(int apt_APTGNo) {
+		this.apt_APTGNo = apt_APTGNo;
+	}
 	public int getV_voterNo() {
 		return v_voterNo;
 	}
@@ -26,10 +33,10 @@ public class Voter implements Serializable {
 	public void setV_roomNo(int v_roomNo) {
 		this.v_roomNo = v_roomNo;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	
