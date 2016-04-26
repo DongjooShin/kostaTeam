@@ -29,7 +29,7 @@
 	<mappers>
 		<mapper resource="apt/mapper/M_signup.xml"/>
 		<mapper resource="apt/xml/Apt.xml"/>
-		<mapper resource="apt/xml/ManagementFee.xml"/>
+		<mapper resource="apt/xml/PublicManagement.xml"/>
 		<mapper resource="apt/xml/Voter.xml"/>
 </mappers>
 	
