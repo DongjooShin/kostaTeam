@@ -3,7 +3,7 @@ package apt.classes;
 import java.io.Serializable;
 
 public class Candidate implements Serializable {
-	private int cd_candidateNo;
+	private int candidateNo;
 	private int cd_voteHit;
 	private String cd_group;
 	private int cd_symbol;
@@ -13,7 +13,14 @@ public class Candidate implements Serializable {
 	private String cd_promise;
 	private String m_memberNo;
 	private int apt_APTGNo;
+	private String cd_imageName;
 	
+	public String getCd_imageName() {
+		return cd_imageName;
+	}
+	public void setCd_imageName(String cd_imageName) {
+		this.cd_imageName = cd_imageName;
+	}
 	public int getApt_APTGNo() {
 		return apt_APTGNo;
 	}
@@ -21,11 +28,11 @@ public class Candidate implements Serializable {
 		this.apt_APTGNo = apt_APTGNo;
 	}
 	
-	public int getCd_candidateNo() {
-		return cd_candidateNo;
+	public int getCandidateNo() {
+		return candidateNo;
 	}
-	public void setCd_candidateNo(int cd_candidateNo) {
-		this.cd_candidateNo = cd_candidateNo;
+	public void setCandidateNo(int cd_candidateNo) {
+		this.candidateNo = cd_candidateNo;
 	}
 	public int getCd_voteHit() {
 		return cd_voteHit;
