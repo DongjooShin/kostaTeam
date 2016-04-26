@@ -3,7 +3,7 @@
     pageEncoding="UTF-8"%>
 <%
 	AptService service = AptService.getInstance();
-    		Object obj=service.selectmanagementfee();
+    		Object obj=service.selectmanagementfee();  
     
     		out.print(obj);
     		

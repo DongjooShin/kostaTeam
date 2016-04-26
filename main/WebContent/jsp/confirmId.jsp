@@ -8,7 +8,7 @@
 	request.setCharacterEncoding("utf-8");
 	String id = request.getParameter("id");
 
-	AptService aptService = AptService.getMemberInstance();
+	AptService aptService = AptService.getInstance();
 	int check = -1;
 	check = aptService.checkMemberIdService(id);
 
@@ -25,6 +25,7 @@
 	function setid() {
 		opener.document.userInput.m_memberNo.value = "${id}";
 		opener.document.userInput.idCheck.value = "1";
+		location.href = "M_signup";
 		self.close();
 	}
 </script>
