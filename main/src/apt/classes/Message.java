@@ -10,7 +10,7 @@ public class Message implements Serializable {
 	private String mg_content;
 	private Timestamp mg_date;
 	private char mg_state;
-	private int m_memberNo;
+	private String m_memberNo;
 	
 	
 	public int getMg_messageNo() {
@@ -49,10 +49,10 @@ public class Message implements Serializable {
 	public void setMg_state(char mg_state) {
 		this.mg_state = mg_state;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	

@@ -4,7 +4,7 @@
 
 
 
-<mapper namespace="apt.AptMapper"> <!-- namespace를 꼭 맞게 써주어야함 -->
+<mapper namespace="apt.mapper.AptMapper"> <!-- namespace를 꼭 맞게 써주어야함 -->
    	<cache />
    
 </mapper>

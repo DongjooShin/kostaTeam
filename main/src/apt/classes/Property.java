@@ -1,11 +1,31 @@
 package apt.classes;
 
-public class Property {
+import java.io.Serializable;
+import java.sql.Timestamp;
+
+public class Property implements Serializable{
+	
+	public Timestamp getPr_date() {
+		return pr_date;
+	}
+	public void setPr_date(Timestamp pr_date) {
+		this.pr_date = pr_date;
+	}
+	
+
+	public Property() {}
+	private Timestamp pr_date;
 	private int pr_propertyNo;
-	private int pr_group;
+	private String pr_group;
+
+	
 	private String pr_APTName;
 	private String pr_addr;
 	private String pr_tel;
+	private String pr_tel1;
+	private String pr_tel12;
+	private String pr_tel13;
+	
 	private int pr_price;
 	private int pr_deposit;
 	private int pr_level;
@@ -18,19 +38,19 @@ public class Property {
 	private String pr_company;
 	private String pr_imageName;
 	private String pr_content;
-	private int m_memberNo;
+//	private int m_memberNo;
 	
-	
+	private String m_memberNo;
 	public int getPr_propertyNo() {
 		return pr_propertyNo;
 	}
 	public void setPr_propertyNo(int pr_propertyNo) {
 		this.pr_propertyNo = pr_propertyNo;
 	}
-	public int getPr_group() {
+	public String getPr_group() {
 		return pr_group;
 	}
-	public void setPr_group(int pr_group) {
+	public void setPr_group(String pr_group) {
 		this.pr_group = pr_group;
 	}
 	public String getPr_APTName() {
@@ -50,6 +70,24 @@ public class Property {
 	}
 	public void setPr_tel(String pr_tel) {
 		this.pr_tel = pr_tel;
+	}
+	public String getPr_tel1() {
+		return pr_tel1;
+	}
+	public void setPr_tel1(String pr_tel1) {
+		this.pr_tel1 = pr_tel1;
+	}
+	public String getPr_tel12() {
+		return pr_tel12;
+	}
+	public void setPr_tel12(String pr_tel12) {
+		this.pr_tel12 = pr_tel12;
+	}
+	public String getPr_tel13() {
+		return pr_tel13;
+	}
+	public void setPr_tel13(String pr_tel13) {
+		this.pr_tel13 = pr_tel13;
 	}
 	public int getPr_price() {
 		return pr_price;
@@ -123,11 +161,14 @@ public class Property {
 	public void setPr_content(String pr_content) {
 		this.pr_content = pr_content;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
+	
 
+
+	
 }
