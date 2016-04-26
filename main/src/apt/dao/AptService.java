@@ -38,24 +38,26 @@ public class AptService {
    
    // 정화
 
-   public Member selectOneMemberService(String id){
-      return votedao.selectOneMember(id);
-   }
-   public Member selectGroupPresiService(){
-      return votedao.selectGroupPresi();
-   }
-   public List<Member> selectBuildingPresiService(){
-      return votedao.selectBuildingPresi();
-   }
-   public List<Candidate> selectAllGPreCandiService(){
-      return votedao.selectAllGPreCandi();
-   }
-   public void levelDownGroupPresiService(int cd_candidateNo){
-      votedao.levelDownGroupPresi(cd_candidateNo);
-   }
    // 수연
 
    // 경태
+
+
+	public Member selectOneMemberService(String id){
+		return votedao.selectOneMember(id);
+	}
+	public Member selectGroupPresiService(){
+		return votedao.selectGroupPresi();
+	}
+	public List<Member> selectBuildingPresiService(){
+		return votedao.selectBuildingPresi();
+	}
+	public List<Candidate> selectAllEachCandiService(String c){
+		return votedao.selectAllEachCandi(c);
+	}
+	public void levelDownGroupPresiService(String cd_candidateNo){
+		votedao.levelDownGroupPresi(cd_candidateNo);
+	}
 
    // 기대
    public Object selectmanagementfee(){
