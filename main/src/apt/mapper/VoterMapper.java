@@ -11,4 +11,6 @@ public interface VoterMapper {
 	public List<Member> selectBuildingPresi();
 	public List<Candidate> selectAllEachCandi(String c);
 	public int levelDownGroupPresi(String candi);
+	public Integer searchSymbol(int s);
+	public int maxCandiNo();
 }

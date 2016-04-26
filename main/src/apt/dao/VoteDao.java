@@ -106,4 +106,33 @@ public class VoteDao {
 			sqlSession.close();
 		}
 	}
+	
+	public Integer searchSymbol(int s){
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Integer re = 0;
+		
+		try {
+			re = sqlSession.getMapper(VoterMapper.class).searchSymbol(s);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		
+		return re;
+	}
+	public int maxCandiNo(){
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		int re = 0;
+		
+		try {
+			re = sqlSession.getMapper(VoterMapper.class).maxCandiNo();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		
+		return re;
+	}
 }

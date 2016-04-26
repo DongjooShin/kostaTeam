@@ -38,14 +38,14 @@
 <script type="text/javascript">
 	function fn_insertForm() {
 		$('.insertForm').prepend('<form action="voteInsertOk.jsp" method="post"><table border="1px"><tr><td>입주민 선택</td>'+
-				'<td><></td></tr><tr><td>이미지파일</td></tr>'
+				'<td><input type="text" name="candi_name" disabled="disabled"><input type="button" value="회원검색" onclick="fn_searching()"></td></tr>'+
+				'<tr><td>이미지파일</td><td><input type="file" name="img_name"></td></tr>'
 				+'<tr><td>기호</td><td><input type="text" name="new_symbol"></td></tr>'+
 				'<tr><td>학력</td><td><input type="text" name="new_eduLevel"></td></tr>'+
 				'<tr><td>직업</td><td><input type="text" name="new_job"></td></tr><tr><td colspan="2">경력</td></tr>'
-				+'<tr><td colspan="2"><textarea rows="" cols=""></textarea></td></tr><tr><td colspan="2">공약</td></tr>'
-				+'<tr><td colspan="2"><textarea rows="" cols=""></textarea> </td></tr></table><br>'+
-				'<input type="submit" value="추가"></form>'+
-				'<input type="button" value="취소" onclick="fn_cancel()">');
+				+'<tr><td colspan="2"><textarea rows="3" cols="8" name="new_career"></textarea></td></tr><tr><td colspan="2">공약</td></tr>'
+				+'<tr><td colspan="2"><textarea rows="3" cols="8" name="new_promise"></textarea> </td></tr></table><br>'+
+				'<input type="submit" value="추가"></form>');
 	}
 	
 	function fn_levelDown(){
@@ -55,12 +55,14 @@
 	function fn_cancel(){
 		location.href="voteGroupPresiRegists.jsp";
 	}
+	
+	function fn_searching(){
+		
+	}
 </script>
 
 </head>
 <body>
-
-
 
 
 <div id="outline" style="background-color:#c0e7fe;">
@@ -106,7 +108,6 @@
 
 
 <input type="button" value="투표 시작하기" onclick="fn_voteStart()">
-<input type="button" value="임시저장하기" onclick="fn_tempStore()">
 <input type="button" value="취소하기" onclick="fn_cancel()">
 	
 </div>	

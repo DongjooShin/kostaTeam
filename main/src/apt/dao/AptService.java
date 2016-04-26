@@ -16,6 +16,7 @@ import apt.classes.ManagementFee;
 import apt.classes.Member;
 import apt.classes.PublicManagementFee;
 
+
 public class AptService {
    
    public static PublicManagementDao mfd;
@@ -46,35 +47,36 @@ public class AptService {
       return memberdao.checkLoginAndPass(loginCheck);
    }
    
-   // 정화
-
-
-   public Member selectOneMemberService(String id){
-      return votedao.selectOneMember(id);
-   }
-   public Member selectGroupPresiService(){
-      return votedao.selectGroupPresi();
-   }
-   public List<Member> selectBuildingPresiService(){
-      return votedao.selectBuildingPresi();
-   }
-   public List<Candidate> selectAllEachCandiService(String c){
-      return votedao.selectAllEachCandi(c);
-   }
-   public void levelDownGroupPresiService(String candi){
-      votedao.levelDownGroupPresi(candi);
-   }
-   public void levelDownGroupPresiService(int cd_candidateNo){
-        
+  
+	public Member selectOneMemberService(String id){
+		return votedao.selectOneMember(id);
+	}
+	public Member selectGroupPresiService(){
+		return votedao.selectGroupPresi();
+	}
+	public List<Member> selectBuildingPresiService(){
+		return votedao.selectBuildingPresi();
+	}
+	public List<Candidate> selectAllEachCandiService(String c){
+		return votedao.selectAllEachCandi(c);
+	}
+	public void levelDownGroupPresiService(String candi){
+		votedao.levelDownGroupPresi(candi);
+	}
+	public void levelDownGroupPresiService(int cd_candidateNo){
+		  
       votedao.levelDownGroupPresi(Integer.toString(cd_candidateNo));
     }
-      
-
-   // 수연
+	public Integer searchSymbolService(int s){
+		return votedao.searchSymbol(s);
+	}
+	public int maxCandiNoService(){
+		return votedao.maxCandiNo();
+	}
 
    
    public Object selectPublicmanageServer(){
-      return mfd.selectPublicmanage();
+	   return mfd.selectPublicmanage();
    }
    
    // 경태

@@ -29,7 +29,7 @@
 	
 	AptService service = AptService.getInstance();
 	
-	ManagementFee        mntf = service.selectMntFeeService(date);	
+	ManagementFee        mntf = service.selectMntFeeService(date);	 
 	PublicManagementFee pmntf = service.selectPublicMntFeeService(date);
 	
 	ManagementFee       b_mntf  = service.selectMntFeeService(beforeDate);

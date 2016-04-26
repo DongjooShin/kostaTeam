@@ -30,7 +30,7 @@
 	}
 	
 	AptService service = AptService.getInstance();
-	List<Member> list = service.selectMemberService(buildingNo, roomNo);
+	List<Member> list = service.selectMemberService(buildingNo, roomNo); 
 	
 	//아이디 얻어옴
 	String [] m_memberNo = new String [list.size()];
