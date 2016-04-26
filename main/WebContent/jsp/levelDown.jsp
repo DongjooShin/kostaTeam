@@ -8,7 +8,7 @@
     AptService aptService= AptService.getInstance();
     
 
-    aptService.levelDownGroupPresiService(no);
+    aptService.levelDownGroupPresiService(no); 
      
     response.sendRedirect("voteGroupPresiRegists.jsp");
 

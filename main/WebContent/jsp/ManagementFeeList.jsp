@@ -35,6 +35,12 @@
 	ManagementFee       b_mntf  = service.selectMntFeeService(beforeDate);
 	PublicManagementFee b_pmntf = service.selectPublicMntFeeService(beforeDate);
 	
+	
+	request.setAttribute("mntf", mntf);
+	request.setAttribute("pmntf", pmntf);
+	request.setAttribute("b_mntf", b_mntf);
+	request.setAttribute("b_pmntf", b_pmntf);
+	
 	//service.selectBeforeMntFee
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -118,308 +124,139 @@
 								<tr>
 									<td>청소비</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_clean() %>
-										<%
-											}
-										%>
+										 ${pmntf.Pm_clean}
 									</td>
 									<td>
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_clean() %>
-										<%
-											} 
-										%>
+										${b_pmntf.Pm_clean} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>일반관리비</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_general() %>
-										<%
-											}
-										%>
+										${pmntf.Pm_general}
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_general() %>
-										<%
-											} 
-										%>
+										${b_pmntf.Pm_general} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>수선유지비</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_maintain() %>
-										<%
-											}
-										%>
+										${pmntf.Pm_maintain }										
 									</td>
 									<td><!-- 전월 -->
-										<%
-											if(year != null){
-										%>
-										<%= b_pmntf.getPm_maintain() %>
-										<%
-											}
-										%>
+										${b_pmntf.Pm_maintain} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>승강기유지비</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_liftMaintain() %>
-										<%
-											}
-										%>
+										${pmntf.Pm_liftMaintain} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-											if(year != null){
-										%>
-										<%= b_pmntf.getPm_general() %>
-										<%
-											}
-										%>
+										${b_pmntf.Pm_general} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>경비용역비</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_security() %>
-										<%
-											}
-										%>									
+										${pmntf.Pm_security} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_security() %>
-										<%
-											} 
-										%>
+										${b_pmntf.Pm_security} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>음식물수거비</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_foodWaste() %>
-										<%
-											}
-										%>
+										${pmntf.pm_foodWaste} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_foodWaste() %>
-										<%
-											} 
-										%>
+										${b_pmntf.pm_foodWaste}
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>화재보험료</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_fireInsurance() %>
-										<%
-											}
-										%>
+										${pmntf.pm_fireInsurance} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_fireInsurance() %>
-										<%
-											} 
-										%>
+										${b_pmntf.pm_fireInsurance} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>위탁수수료</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_commission() %>
-										<%
-											}
-										%>
+										${ pmntf.Pm_commission} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_commission() %>
-										<%
-											} 
-										%>
+										${ b_pmntf.Pm_commission} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>동대표회의비</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_meeting() %>
-										<%
-											}
-										%>
+										${pmntf.Pm_meeting}
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_meeting() %>
-										<%
-											} 
-										%>
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>공동전기료</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_publicElectric() %>
-										<%
-											}
-										%>
+										${pmntf.pm_publicElectric}
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_publicElectric() %>
-										<%
-											} 
-										%>
+										${b_pmntf.pm_publicElectric}
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>승강기전기료</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_liftElectric() %>
-										<%
-											}
-										%>
+										${ pmntf.pm_liftElectric} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_liftElectric() %>
-										<%
-											} 
-										%>
+										${ b_pmntf.pm_liftElectric} 
 									</td>
 									<td></td>
 								</tr>
 								<tr>
 									<td>TV수신료</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										%>
-										<%= pmntf.getPm_TVFee() %>
-										<%
-											}
-										%>
+										${ pmntf.pm_TVFee} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_pmntf.getPm_TVFee() %>
-										<%
-											} 
-										%>
+										${ b_pmntf.pm_TVFee} 
 									</td>
 									<td></td>
 								</tr>
 								<tr class="warning">
 									<td>세대전기료</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										 %>
-										<%= mntf.getMf_electricFee() %>
-										<%
-											}
-										%>
+										${mntf.mf_electricFee} 
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_mntf.getMf_electricFee() %>
-										<%
-											} 
-										%>
+										${b_mntf.mf_electricFee} 
 									</td>
 									<td></td>
 								</tr>
 								<tr class="warning">
 									<td>세대난방료</td>
 									<td><!-- 당월 -->
-										<%
-											if(year != null){
-										 %>
-										<%= mntf.getMf_gasFee() %>
-										<%
-											}
-										%>
+										${mntf.mf_gasFee}
 									</td>
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_mntf.getMf_gasFee() %>
-										<%
-											} 
-										%>
+										${b_mntf.mf_gasFee}
 									</td>
 									<td></td>
 								</tr>
@@ -428,24 +265,12 @@
 									
 									<!-- 당월 -->
 									<td>
-										<%
-											if(year != null){
-										 %>
-										<%= mntf.getMf_waterFee() %>
-										<%
-											}
-										%>
+										${mntf.mf_waterFee} 
 									</td>
 									
 									<!-- 전월 -->
 									<td><!-- 전월 -->
-										<%
-												if(year != null){
-										%>
-										<%= b_mntf.getMf_waterFee() %>
-										<%
-											} 
-										%>
+										${b_mntf.mf_waterFee} 
 									</td>
 									<td></td>
 								</tr>

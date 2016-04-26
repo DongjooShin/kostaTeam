@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="../css/basic2.css">
 <link rel="stylesheet" href="../css/basic3.css">
 <body>
-	<div id="page" class="hfeed site">
+	<div id="page" class="hfeed site col-lg-11">
 		<header id="masthead" class="site-header clearfix">
 
 		<div id="header-text-nav-container">
@@ -91,7 +91,7 @@
 							<ul id="menu-primary" class="menu">
 								<li id="menu-item-9"
 									class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-9"><a
-									href="main.jsp?body='Publicmanage.jsp'">관리비</a>
+									href="main.jsp?body=Publicmanage.jsp">관리비</a>
 									<ul class="sub-menu">
 										<li id="menu-item-255"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a

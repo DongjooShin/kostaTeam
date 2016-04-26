@@ -36,12 +36,6 @@ public class AptService {
    
    
    // 동주
-   public void insertMemberService(Member member){
-      System.out.println("test2");
-      memberdao.insertMember(member);
-      
-      System.out.println("test5");
-   }
    
    public int checkMemberIdService(String m_memberNo){
       
