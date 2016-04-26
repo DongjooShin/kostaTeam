@@ -9,7 +9,7 @@
 
 <%
 	AptService aptService = AptService.getInstance();
-	Member m = aptService.selectOneMemberService("tndusdla92");
+	Member m = aptService.selectOneMemberService("tndusdla92"); 
 	//m = manager, r = resident
 	
 	request.setAttribute("m", m);

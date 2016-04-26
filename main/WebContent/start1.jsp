@@ -12,10 +12,10 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spacious &#8211; ThemeGrill Demo site</title>
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/mainLink1.css">
-<link rel="stylesheet" href="css/mainLink2.css">
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/header/main.css">
+<link rel="stylesheet" href="css/header/mainLink1.css">
+<link rel="stylesheet" href="css/header/mainLink2.css">
+<link href="bootstrap/dong/css/bootstrap.min.css" rel="stylesheet">
 <script src='http://demo.themegrill.com/spacious/wp-includes/js/jquery/jquery.js?ver=1.12.3'></script>
 </head>
 

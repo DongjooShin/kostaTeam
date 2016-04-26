@@ -3,9 +3,10 @@
     pageEncoding="UTF-8"%>
 <%
 	AptService service = AptService.getInstance();
-    		Object obj= service.selectPublicmanage();
+    		Object obj= service.selectPublicmanage(); 
     
     		out.print(obj);
     		
 %>    
     
+ 

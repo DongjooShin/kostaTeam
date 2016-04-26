@@ -13,7 +13,7 @@
 
 	Member gpm = aptService.selectGroupPresiService();
 
-	List<Candidate> candilist = aptService.selectAllGPreCandiService();
+	List<Candidate> candilist = aptService.selectAllGPreCandiService(); 
    
 	
 	request.setAttribute("m_id", m.getM_memberNo());

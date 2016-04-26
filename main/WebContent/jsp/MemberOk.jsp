@@ -12,7 +12,7 @@
 	member.sumTellNum();
 	
 	
-	AptService aptService = AptService.getMemberInstance();
+	AptService aptService = AptService.getInstance();
 
 	aptService.insertMemberService(member);
 	

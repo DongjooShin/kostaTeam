@@ -7,9 +7,9 @@
     <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     <%
 	AptService service = AptService.getInstance();
-    List list=service.selectYearPublicmanage();
+    List list=service.selectYearPublicmanage(); 
     request.setAttribute("p", list.get(0));
-    request.setAttribute("p2", list.get(1));
+    request.setAttribute("p2", list.get(1)); 
 	%>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

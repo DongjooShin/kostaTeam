@@ -12,7 +12,7 @@
     AptService aptService= AptService.getInstance();
     
     aptService.levelDownGroupPresiService(cd_candidateNo);
-    
+     
     response.sendRedirect("voteGroupPresiRegist.jsp");
     %>
     
