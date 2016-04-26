@@ -25,6 +25,7 @@
 	function setid() {
 		opener.document.userInput.m_memberNo.value = "${id}";
 		opener.document.userInput.idCheck.value = "1";
+		location.href = "M_signup";
 		self.close();
 	}
 </script>

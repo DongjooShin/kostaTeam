@@ -9,7 +9,7 @@
 
 <%
 	AptService aptService = AptService.getInstance();
-	Member m = aptService.selectOneMemberService("tndusdla92");
+	Member m = aptService.selectOneMemberService("tndusdla92"); 
 	//m = manager, r = resident
 	 
 	request.setAttribute("m", m);
@@ -46,7 +46,7 @@
 		<c:when test="${m.getM_grade() == 2 }"> <!-- case: manager -->
 			<c:choose>
 				<c:when test="${m.getV_flag() == 1 }">
-					<form class="vote_back" action="voteGroupPresiRegist.jsp" method="post">
+					<form class="vote_back" action="voteGroupPresiRegists.jsp" method="post">
 							<input id="CandiRegiButton" type="submit" value="후보자 등록">
 							<input type="hidden" name="m_id" value="${m.getM_memberNo() }">
 					</form>

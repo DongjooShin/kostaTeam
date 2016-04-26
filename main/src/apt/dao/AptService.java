@@ -2,6 +2,12 @@ package apt.dao;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import apt.classes.Candidate;
+import java.util.List;
+
 import apt.classes.Candidate;
 import apt.classes.Member;
 import apt.classes.PublicManagementFee;
@@ -39,8 +45,8 @@ public class AptService {
    public List<Member> selectBuildingPresiService(){
 	   return votedao.selectBuildingPresi();
    }
-   public List<Candidate> selectAllGPreCandiService(){
-	   return votedao.selectAllGPreCandi();
+   public List<Candidate> selectAllGPreCandiService(String cd){
+	   return votedao.selectAllEachCandi(cd);
    }
 
    
@@ -54,7 +60,8 @@ public class AptService {
    }
    // 정화
   public void levelDownGroupPresiService(int cd_candidateNo){
-      votedao.levelDownGroupPresi(cd_candidateNo);
+	  
+      votedao.levelDownGroupPresi(Integer.toString(cd_candidateNo));
    }
    
    

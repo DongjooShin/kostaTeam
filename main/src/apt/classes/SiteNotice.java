@@ -7,10 +7,10 @@ public class SiteNotice implements Serializable {
 	private int sn_siteNoticeNo;
 	private String sn_title;
 	private String sn_content;
-	private Timestamp sn_date;
+	private String sn_date;
 	private int sn_hit;
 	private String sn_fileName;
-	private int m_memberNo;
+	private String m_memberNo;
 	
 	
 	public int getSn_siteNoticeNo() {
@@ -31,10 +31,10 @@ public class SiteNotice implements Serializable {
 	public void setSn_content(String sn_content) {
 		this.sn_content = sn_content;
 	}
-	public Timestamp getSn_date() {
+	public String getSn_date() {
 		return sn_date;
 	}
-	public void setSn_date(Timestamp sn_date) {
+	public void setSn_date(String sn_date) {
 		this.sn_date = sn_date;
 	}
 	public int getSn_hit() {
@@ -49,10 +49,10 @@ public class SiteNotice implements Serializable {
 	public void setSn_fileName(String sn_fileName) {
 		this.sn_fileName = sn_fileName;
 	}
-	public int getM_memberNo() {
+	public String getM_memberNo() {
 		return m_memberNo;
 	}
-	public void setM_memberNo(int m_memberNo) {
+	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
 	

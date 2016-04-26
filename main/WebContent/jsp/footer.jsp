@@ -5,10 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/mainLink1.css">
+<link rel='stylesheet' href='../css/basic1.css' type='text/css' media='all' />
+<!-- 레이아웃구성 -->
+
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Lato&#038;ver=93f7ae8c928ef17b2e2e9a75b559118c' type='text/css' media='all' />
+<!-- 글꼴구성 -->
+
 
 </head>
 <body>
+<div id="page" class="hfeed site">
 <footer id="colophon" class="clearfix">
 
 	
@@ -43,5 +49,6 @@
 			</div>
 		</div>
 		</footer>
+		</div>
 </body>
 </html>
