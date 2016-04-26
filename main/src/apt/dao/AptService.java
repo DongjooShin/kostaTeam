@@ -80,11 +80,11 @@ public class AptService {
       return mfd.selectYearPublicmanage();
    }
 
-/*   // 경운
-   public int insertMemberService(Member member){
-      return memberdao.insertMember(member);
+   // 경운
+   public void insertMemberService(Member member){
+       memberdao.insertMember(member);
       
-   }*/
+   }
    public void aaaa(){
       System.out.println("test");
    }

@@ -21,15 +21,6 @@
 <script type="text/javascript" src="js/gidae/bargraph.js"></script>
 <script type="text/javascript" src="plugins/gidae/jqplot.categoryAxisRenderer.min.js"></script>
 <script type="text/javascript" src="plugins/gidae/jqplot.pointLabels.min.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>우리 아파트</title>
-
-
-
 	    <!-- Bootstrap Core CSS -->
     <link href="css/gidae/bootstrap.min.css" rel="stylesheet">
 
@@ -37,7 +28,6 @@
     <link href="css/gidae/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/gidae/plugins/morris.css" rel="stylesheet">
 	    <!-- jQuery Version 1.11.0 -->
     <script src="js/gidae/jquery-1.11.0.js"></script>
 
@@ -48,6 +38,16 @@
     <script src="js/gidae/morris/raphael.min.js"></script>
     <script src="js/gidae/morris/morris.min.js"></script>
     <script src="js/gidae/morris/morris-data.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>우리 아파트</title>
+
+
+
+
 </head>
 <body>
 

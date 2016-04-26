@@ -30,12 +30,13 @@
 		<c:if test="${check ==-1 }">
 			<jsp:include page="header.jsp"></jsp:include>
 		</c:if>
-	</div>
+	</div> 
 	<div class="main">
-		<jsp:include page="start.jsp"></jsp:include>
+		<jsp:include page="Publicmanage.jsp"></jsp:include>
 	</div>
 	<div class="footer">
 		<jsp:include page="footer.jsp"></jsp:include>
+		
 	</div>
 </body>
 </html>

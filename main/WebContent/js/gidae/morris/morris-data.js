@@ -4,7 +4,7 @@ $(function() {
 
 		
 	$.ajax({
-		url: 'data/selectPublicmanage.jsp',
+		url: '../data/selectPublicmanage.jsp',
 		type: 'post',
 		dataType: 'json',
 		success: successHandler,

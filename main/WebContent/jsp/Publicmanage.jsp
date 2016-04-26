@@ -18,9 +18,6 @@
 <link class="include" rel="stylesheet" type="text/css" href="jquery.jqplot.min.css" />
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/gidae/jquery.jqplot.min.js"></script>
-<script type="text/javascript" src="../js/gidae/bargraph.js"></script>
-<script type="text/javascript" src="../plugins/gidae/jqplot.categoryAxisRenderer.min.js"></script>
-<script type="text/javascript" src="../plugins/gidae/jqplot.pointLabels.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -29,7 +26,10 @@
     <title>우리 아파트</title>
 
 
-
+<!-- Morris Charts JavaScript -->
+    <script src="../js/gidae/morris/raphael.min.js"></script>
+    <script src="../js/gidae/morris/morris.min.js"></script>
+    <script src="../js/gidae/morris/morris-data.js"></script>
 	    <!-- Bootstrap Core CSS -->
     <link href="../css/gidae/bootstrap.min.css" rel="stylesheet">
 
@@ -37,24 +37,19 @@
     <link href="../css/gidae/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="../css/gidae/plugins/morris.css" rel="stylesheet">
 	    <!-- jQuery Version 1.11.0 -->
     <script src="../js/gidae/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/gidae/bootstrap.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="../js/gidae/morris/raphael.min.js"></script>
-    <script src="../js/gidae/morris/morris.min.js"></script>
-    <script src="../js/gidae/morris/morris-data.js"></script>
+    
 </head>
 <body>
-
+<div id="page" class="hfeed site">
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-8">
-                    <div class="col-lg-2"></div>
                        <h2>연도별 공동관리비 </h2>
                         <div class="panel panel-red">
                             <div class="panel-heading">
@@ -66,16 +61,10 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
                 <div class="row">
                     <div class="col-lg-2">
                     </div>
                     <div class="col-lg-8">
-                    <div class="col-lg-2"></div>
                        <h2>관리비 내역</h2>
                        <button name="excel" value="엑셀파일로">엑셀파일로 보기</button>
                          <div class="table-responsive">
@@ -293,6 +282,6 @@
                     </div>
                     </div>
     
-                
+                </div>
 </body>
 </html>
