@@ -1,3 +1,4 @@
+<%@page import="apt.dao.AptService"%>
 <%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -16,9 +17,11 @@
 		String id = (String) session.getAttribute("id");
 		request.setAttribute("id", id);
 		check = 1;
-
 	}
 	request.setAttribute("check", check);
+	request.setAttribute("body", body);
+	
+	
 	
 	
 %>
@@ -35,16 +38,16 @@
 		<c:if test="${check ==1 }">
 			<jsp:include page="header.jsp?id=${id }"></jsp:include>
 		</c:if>
+		
 		<c:if test="${check ==-1 }">
 			<jsp:include page="header.jsp"></jsp:include>
 		</c:if>
 	</div> 
 	<div class="main">
-		<jsp:include page="<%=body %>"></jsp:include>
+		 <jsp:include page="${body }"></jsp:include> 
 	</div>
 	<div class="footer">
 		<jsp:include page="footer.jsp"></jsp:include>
-		
 	</div>
 </body>
 </html>

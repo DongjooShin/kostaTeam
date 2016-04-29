@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import apt.classes.Candidate;
+import apt.classes.Complaint;
+import apt.classes.ListModel;
 import apt.classes.LoginCheck;
 
-import java.util.List;
 
-import apt.classes.Candidate;
 import apt.classes.ManagementFee;
 import apt.classes.Member;
 import apt.classes.PublicManagementFee;
@@ -24,6 +24,7 @@ public class AptService {
    public static VoteDao votedao;
    public static ManagementFeeDao mngDao;
    public static AptService service = new AptService();
+   public final static int complaintSzie =5;
    
    
    public static AptService getInstance(){
@@ -45,6 +46,9 @@ public class AptService {
    
    public int checkLoginAndPassSerice(LoginCheck loginCheck){
       return memberdao.checkLoginAndPass(loginCheck);
+   }
+   public void insertMemberService(Member member){
+	      memberdao.insertMember(member);
    }
    
   
@@ -107,13 +111,89 @@ public class AptService {
       return mfd.selectManagementFee();
    }
    
-   
+   public int inserComplaint(Complaint complain){
+/*	   HttpSession session = request.getSession();
+	   System.out.println( session.getAttribute("id"));*/
+	   return memberdao.insertComplaint(complain);
+	   
+   }
+   public apt.classes.ListModel listComplaint(HttpServletRequest requset,String pageNum){
+	   
+	   int requestPage = Integer.parseInt(pageNum);
+	   HttpSession session = requset.getSession();
+	   String id = (String)session.getAttribute("id");
+	   int totalCount = memberdao.countComplaint(id);
+		int totalPageCount = totalCount/complaintSzie;
+		if(totalCount%complaintSzie>0){
+			totalCount++;
+		}
+		int startPage = requestPage -(requestPage-1) %5;
+		int endPage = startPage+4;
+		
+		if(endPage>totalPageCount){
+			endPage = totalPageCount;
+		}
+		
+		List<Complaint> list=memberdao.listComplaint((requestPage-1)*complaintSzie,id);
+		  
+	   return new apt.classes.ListModel(list, requestPage, totalPageCount, startPage, endPage);
+   }
  
    public List<PublicManagementFee> selectYearPublicmanage(){
       return mfd.selectYearPublicmanage();
    }
-
-   public void aaaa(){
-      System.out.println("test");
+   public Complaint selectcomplaint(String cp_complaintNo){
+	   
+	   return memberdao.selectComplaint(cp_complaintNo);
+	   
    }
+   public ListModel ListComplaintManage(HttpServletRequest requset,String pageNum){
+	   int requestPage = Integer.parseInt(pageNum);
+	   HttpSession session = requset.getSession();
+	   int totalCount = memberdao.countComplaintManage();
+		int totalPageCount = totalCount/complaintSzie;
+		if(totalCount%complaintSzie>0){
+			totalCount++;
+		}
+		int startPage = requestPage -(requestPage-1) %5;
+		int endPage = startPage+4;
+		
+		if(endPage>totalPageCount){
+			endPage = totalPageCount;
+		}
+		
+		List<Complaint> list=memberdao.listComplaintManage((requestPage-1)*complaintSzie);
+		  
+	   return new apt.classes.ListModel(list, requestPage, totalPageCount, startPage, endPage);
+   }
+   
+   public List<Complaint> mypageComplaint(HttpServletRequest requset){
+	   HttpSession session = requset.getSession();
+	   String id = (String)session.getAttribute("id");
+	   System.out.println(id);
+	   return memberdao.listmypageComplaint(id);
+   }
+ public apt.classes.ListModel ManageComplaint(HttpServletRequest requset,String pageNum){
+	   
+	   int requestPage = Integer.parseInt(pageNum);
+	   HttpSession session = requset.getSession();
+	   int totalCount = memberdao.countManageComplaint();
+		int totalPageCount = totalCount/complaintSzie;
+		if(totalCount%complaintSzie>0){
+			totalCount++;
+		}
+		int startPage = requestPage -(requestPage-1) %5;
+		int endPage = startPage+4;
+		
+		if(endPage>totalPageCount){
+			endPage = totalPageCount;
+		}
+		
+		List<Complaint> list=memberdao.listComplaintManage((requestPage-1)*complaintSzie);
+		  
+	   return new apt.classes.ListModel(list, requestPage, totalPageCount, startPage, endPage);
+   }
+ public void updateComplaint(Complaint complain){
+	 memberdao.updateComplaint(complain);
+ }
 }   

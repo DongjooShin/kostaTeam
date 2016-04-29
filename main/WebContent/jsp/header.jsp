@@ -1,3 +1,5 @@
+<%@page import="apt.classes.Member"%>
+<%@page import="apt.dao.AptService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -6,8 +8,15 @@
 	int check = -1;
 	if (request.getAttribute("id") != null) {
 		check = 1;
+    String id =	(String)session.getAttribute("id");
+	AptService service	=AptService.getInstance();
+	 Member m = service.selectOneMemberService(id);
+	 
+	request.setAttribute("m", m);
+	out.print(m.getM_grade()+"등급입니다");
 	}
 	request.setAttribute("check", check);
+	
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -22,7 +31,7 @@
 <link rel="stylesheet" href="../css/basic2.css">
 <link rel="stylesheet" href="../css/basic3.css">
 <body>
-	<div id="page" class="hfeed site col-lg-11">
+	<div id="page" >
 		<header id="masthead" class="site-header clearfix">
 
 		<div id="header-text-nav-container">
@@ -59,7 +68,7 @@
 
 								<ul class="sub-menu1">
 									<c:if test="${check ==-1 }">
-										<li><a href="login.jsp">로그인</a></li>
+										<li><a href="main.jsp?body=login.jsp">로그인</a></li>
 										<li><a href="M_signup.jsp">회원가입</a></li>
 									</c:if>
 
@@ -90,8 +99,14 @@
 						<div class="menu-primary-container">
 							<ul id="menu-primary" class="menu">
 								<li id="menu-item-9"
-									class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-9"><a
-									href="main.jsp?body=Publicmanage.jsp">관리비</a>
+									class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-7 current_page_item menu-item-9">
+								<c:if test="${check==1}">
+									<a href="main.jsp?body=Publicmanage.jsp">관리비</a>
+								</c:if>
+								<c:if test="${check!=1}">
+									<a href="main.jsp?body=login.jsp">관리비</a>
+								</c:if>
+								
 									<ul class="sub-menu">
 										<li id="menu-item-255"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a
@@ -112,8 +127,13 @@
 
 
 								<li id="menu-item-254"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-254"><a
-									href="http://demo.themegrill.com/spacious/shop/">아파트정보</a>
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-254">
+								<c:if test="${check==1}">
+									<a href="main.jsp?body=Publicmanage.jsp">관리비</a>
+								</c:if>
+								<c:if test="${check!=1}">
+									<a href="main.jsp?body=login.jsp">관리비</a>
+								</c:if>
 									<ul class="sub-menu">
 										<li id="menu-item-255"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a
@@ -169,9 +189,19 @@
 									</ul></li>
 
 								<li id="menu-item-111"
-									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a
-									target="_blank"
-									href="http://themegrill.com/themes/spacious-pro/">마이페이지</a>
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111">
+									<c:if test="${m.m_grade==1 }">
+									<a href="main.jsp?body=mypage.jsp">마이페이지</a>
+									</c:if>
+									<c:if test="${m.m_grade==2 }">
+									<a href="main.jsp?body=manageMypage.jsp">마이페이지</a>
+									</c:if>
+									<c:if test="${m.m_grade==3 }">
+									<a href="main.jsp?body=mypage.jsp">마이페이지</a>
+									</c:if>
+									<c:if test="${check !=1 }">
+									<a href="main.jsp?body=login.jsp">마이페이지</a>
+									</c:if>
 									<ul class="sub-menu">
 										<li id="menu-item-110"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a
