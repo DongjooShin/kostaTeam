@@ -88,9 +88,6 @@
 	class="home singular page page-id-7 page-template page-template-page-templates page-template-business page-template-page-templatesbusiness-php "
 	onload="focusIt()">
 	<div id="page" class="hfeed site">
-		<div class="header">
-			<jsp:include page="header.jsp"></jsp:include>
-		</div>
 
 		<div class="col-md-12">
 			<!-- Top content -->

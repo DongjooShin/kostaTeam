@@ -1,83 +1,91 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@page import="apt.classes.Complaint"%>
+<%@page import="apt.dao.AptService"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+    
+    <%
+   String body2 = request.getParameter("body2");
+	 
+ 	if(body2 ==null){
+		
+		body2 ="mypagefirst.jsp";
+	
+	} 
+	  request.setAttribute("body2", body2);
+ 
+	
+	
+ %>   
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <title>Admin Home Page</title>
+        <!-- Bootstrap -->
+        <link href="../css/gidae/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../css/gidae/styles.css" rel="stylesheet" media="screen">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <script src="../js/gidae/morris/morris-data.js"></script>
+               <script src="../js/gidae/morris/raphael.min.js"></script>
+    <script src="../js/gidae/morris/morris.min.js"></script>
+    <script src="../js/gidae/morris/morris-data.js"></script>
+	    <!-- Bootstrap Core CSS -->
+    <link href="../css/gidae/bootstrap.min.css" rel="stylesheet">
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- ±¸Çü ÀÍ½ºÇÃ·Î·¯¸¦ À§ÇØ ½áÁÖ´Â ºÎºĞ -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- ÀÌºÎºĞÀÌ ¹Ù·Î ¹İÀÀÇü À¥!! µğ¹ÙÀÌ½ºÀÇ °¡·ÎÅ©±â¿¡ ¸ÂÃç ÄÁÅÙÆ®ÀÇ °¡·Î¸¦ ¸ÂÃá´Ù. -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-<title>Insert title here</title>
-<link href="../css/kfonts2.css" rel="stylesheet">
-<style>
-h2 {
-	margin: 20px 0
-}
+    <!-- Custom CSS -->
+    <link href="../css/gidae/sb-admin.css" rel="stylesheet">
 
-.tab-content {
-	padding: 10px 0;
-	background-color: #c9effe;
-}
-</style>
-</head>
-<body>
+    <!-- Morris Charts CSS -->
+	    <!-- jQuery Version 1.11.0 -->
+            
+    </head>
+    
+    <body>
+    				<div class="col-lg-2"></div>
+                    <div class="row-fluid col-lg-8">
+                        <div class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <h4>ë§ˆì´í˜ì´ì§€</h4>
+                        	</div>
+                        	<div class="navbar">
+                            	<div class="navbar-inner">
+	                                <ul class="breadcrumb">
+	                                    <li>
+	                                        <a href="#">ì•„íŒŒíŠ¸ê·¸ë£¹</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li>
+	                                        <a href="#">ë™ê²Œì‹œíŒ</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li>
+	                                        <a href="#">ê´€ë¦¬ë¹„</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li>
+	                                        <a href="main.jsp?body=mypage.jsp?body2=listComplaint.jsp&&body=mypage.jsp">ë¬¸ì˜ë‹µë³€</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li>
+	                                        <a href="#">ê±´ì˜í•¨(ì‚¬ì´íŠ¸)</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li>
+	                                        <a href="#">ìª½ì§€í•¨</a> <span class="divider">/</span>	
+	                                    </li>
+	                                    <li>
+	                                        <a href="#">ê°œì¸ì •ë³´ìˆ˜ì •</a> <span class="divider">/</span>	
+	                                    </li>
+	                                </ul>
+                            	</div>
+                        	</div>
+              <div class="tab-content">
+ 			
+ 			<jsp:include page="${body2 }"></jsp:include>
+ 			
+            </div>  
+                    	</div>
+            <hr>
+        <!--/.fluid-container-->
+        <script src="../js/gidae/bootstrap.min.js"></script>
+    </body>
 
-	<div class="container">
-		<h1>¸¶ÀÌÆäÀÌÁö</h1><br><br>
-		
-		<ul class="nav nav-tabs" id="myTab">
-			<li><a href="#home">¾ÆÆÄÆ®±×·ì</a></li>
-			<li><a href="#tab1">µ¿°Ô½ÃÆÇ</a></li>
-			<li><a href="#tab2">°ü¸®ºñ</a></li>
-			<li><a href="#tab3">¹®ÀÇ´äº¯</a></li>
-			<li><a href="#tab4">°ÇÀÇÇÔ</a></li>
-			<li><a href="#tab5">ÂÊÁöÇÔ</a></li>
-			<li><a href="#tab6">°³ÀÎÁ¤º¸¼öÁ¤</a></li>
-		</ul>
-
-		<div class="tab-content">
-			<div class="tab-pane" id="home">
-				<h3>¿ì¸® ´ÜÁö</h3>
-				¿©±â´Â ¿ì¸®´ÜÁö¿¡¿ë Àú¶û ¼ö¿¬¾ğ´Ï²¨
-			</div>
-			<div class="tab-pane" id="tab1">
-				<h3>µ¿°Ô½ÃÆÇ</h3>
-				ÀÌ°Åµµ ³ª¶û ¼ö¿¬¾ğ´Ï²¨
-			</div>
-			<div class="tab-pane" id="tab2">
-				<h3>°ü¸®ºñ</h3>
-				°æÅÂº¿ÀÌ¶û ±â´ëÄ³¸®²¨
-			</div>
-			<div class="tab-pane" id="tab3">
-				<h3>¹®ÀÇ´äº¯</h3>
-				
-			</div>
-				<div class="tab-pane" id="tab4">
-				<h3>°ÇÀÇÇÔ</h3>
-				Á¤È­¶û ¼ö¿¬¾ğ´Ï²¨
-			</div>
-			<div class="tab-pane" id="tab5">
-				<h3>ÂÊÁöÇÔ</h3>
-				°æ¿ì´Ï²¨
-			</div>
-			<div class="tab-pane" id="tab6">
-				<h3>°³ÀÎÁ¤º¸¼öÁ¤</h3>
-				µ¿ÁÖ¿Àºü²¨..?
-			</div>
-			
-		</div>
-	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="../js/gidae/bootstrap.min.js"></script>
-		<script>
-		$('#myTab a').click(function(e) {
-			e.preventDefault()
-			$(this).tab('show')
-		})
-		$('#myTab a:first').tab('show')
-	</script>
-	
-</body>
 </html>

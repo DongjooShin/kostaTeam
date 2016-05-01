@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="apt.mapper.MemberMapper"> <!-- namespace를 꼭 맞게 써주어야함 -->
+   <cache />
+   	<select id="nextCOMPLAINTNO" resultType="Integer" >
+   		select max(CP_COMPLAINTNO)
+			from COMPLAINT
+   		
+   	</select>
+ 	<select id="aptno" resultType="Integer">
+ 	select APT_APTGNO
+ 	from member
+ 	where M_MEMBERNO = #{memberId}
+ 	</select>
+ 	
+ 	
+ 	<insert id="insertComplaint" parameterType="Complaint">
+ 	insert into Complaint 
+ 	
+ 	values(#{cp_complaintNo},#{cp_title},#{cp_content},1,1,#{cp_date},#{m_memberNo},#{apt_APTGNo})
+ 	
+ 	</insert>
+ 	
+ 	<select id="listComplaint" resultType="Complaint" parameterType="String">
+ 	select *
+ 	from complaint
+ 	where M_MEMBERNO =#{id}
+ 	order by cp_complaintNo
+ 	
+ 	
+ 	
+ 	</select>
+   <select id="countComplaint" resultType="Integer" parameterType="String">
+   select count(*)
+   from complaint
+   where m_memberno =#{id}
+   order by cp_complaintNo
+   
+   
+   </select>
+   <select id="selectComplaint" resultType="Complaint" parameterType="String">
+    	select *
+ 	from complaint
+ 	where cp_complaintNo =#{cp_complaintNo} 
+   
+   
+   </select>
+   <select id="countComplaintManage" resultType="Integer">
+      select count(*)
+   from complaint
+   </select>
+   <select id="listComplaintManage" resultType="Complaint">
+         select *
+   from complaint
+   order by cp_complaintNo
+   
+   
+   </select>
+   
+   <select id="listmypageComplaint" resultType="Complaint" parameterType="String">
+    
+    select *
+    from( select *
+ 	 from complaint
+ 	 where m_memberNo =#{id} 
+	 order by cp_complaintNo)
+	 where<![CDATA[ ROWNUM <=3 ]]>
+   </select>
+   
+   <update id="updateComplaint" parameterType="Complaint">
+   update complaint
+   set  cp_state = #{cp_state}
+   where cp_complaintNo = ${cp_complaintNo}
+   
+   </update>
+</mapper>
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@ package apt.classes;
 import java.io.Serializable;
 
 public class PublicManagementFee implements Serializable {
-	private int pm_publicFeeNo;
+	private String pm_publicFeeNo;
 	private int pm_clean;
 	private int pm_general;
 	private int pm_maintain;
@@ -24,12 +24,6 @@ public class PublicManagementFee implements Serializable {
 	}
 	public void setApt_APTGNo(int apt_APTGNo) {
 		this.apt_APTGNo = apt_APTGNo;
-	}
-	public int getPm_publicFeeNo() {
-		return pm_publicFeeNo;
-	}
-	public void setPm_publicFeeNo(int pm_publicFeeNo) {
-		this.pm_publicFeeNo = pm_publicFeeNo;
 	}
 	public int getPm_clean() {
 		return pm_clean;
@@ -110,6 +104,13 @@ public class PublicManagementFee implements Serializable {
 	public void setPm_disinfection(int pm_disinfection) {
 		this.pm_disinfection = pm_disinfection;
 	}
+	public String getPm_publicFeeNo() {
+		return pm_publicFeeNo;
+	}
+	public void setPm_publicFeeNo(String pm_publicFeeNo) {
+		this.pm_publicFeeNo = pm_publicFeeNo;
+	}
+	
 	
 	
 }

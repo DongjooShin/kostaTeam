@@ -1,16 +1,17 @@
 package apt.classes;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class Complaint implements Serializable {
-	private int cp_complaintNo;
-	private String cp_title;
-	private String cp_group;
-	private String cp_content;
-	private String cp_state;
-	private int cp_ref;
+	private int cp_complaintNo;//
+	private String cp_title;//ok
+	private String cp_content;//ok
+	private String cp_state;//1
+	private int cp_ref;//1
 	private String m_memberNo;
-	private int apt_APTGNo;
+	private int apt_APTGNo;//1
+	private String cp_date;
 	
 	public int getApt_APTGNo() {
 		return apt_APTGNo;
@@ -30,12 +31,6 @@ public class Complaint implements Serializable {
 	}
 	public void setCp_title(String cp_title) {
 		this.cp_title = cp_title;
-	}
-	public String getCp_group() {
-		return cp_group;
-	}
-	public void setCp_group(String cp_group) {
-		this.cp_group = cp_group;
 	}
 	public String getCp_content() {
 		return cp_content;
@@ -61,5 +56,20 @@ public class Complaint implements Serializable {
 	public void setM_memberNo(String m_memberNo) {
 		this.m_memberNo = m_memberNo;
 	}
+	
+	
+	public String getCp_date() {
+		return cp_date;
+	}
+	public void setCp_date(String cp_date) {
+		this.cp_date = cp_date;
+	}
+	@Override
+	public String toString() {
+		return "Complaint [cp_complaintNo=" + cp_complaintNo + ", cp_title=" + cp_title + ", cp_content=" + cp_content
+				+ ", cp_state=" + cp_state + ", cp_ref=" + cp_ref + ", m_memberNo=" + m_memberNo + ", apt_APTGNo="
+				+ apt_APTGNo + ", cp_date=" + cp_date + "]";
+	}
+	
 	
 }

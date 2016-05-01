@@ -14,7 +14,7 @@
 	LoginCheck loginCheck = new LoginCheck();
 	loginCheck.setM_memberNo(id);
 	loginCheck.setM_pass(pass);
-	
+	 
 	AptService aptService = AptService.getInstance();
 	int check = aptService.checkLoginAndPassSerice(loginCheck);  
 	

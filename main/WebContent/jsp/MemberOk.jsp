@@ -10,7 +10,7 @@
 	
 	member.sumPhoneNum();
 	member.sumTellNum();
-	
+	 
 	
 	AptService aptService = AptService.getInstance();
 

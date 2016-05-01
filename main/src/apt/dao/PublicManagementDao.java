@@ -13,6 +13,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import apt.classes.Graph;
 import apt.classes.PublicManagementFee;
@@ -73,6 +74,9 @@ public class PublicManagementDao {
 		sqlsession.close();
 		
 		List list2 = new ArrayList();
+		JSONParser parser = new JSONParser();
+
+		net.sf.json.JSONArray jArray = new net.sf.json.JSONArray();        /* row별로 데이터를 담을 배열 */
 		for(int i=0;i<list.size();i++){
 			Graph g = new Graph();
 			System.out.println(list.get(i).getPm_publicFeeNo());
@@ -83,12 +87,12 @@ public class PublicManagementDao {
 					list.get(i).getPm_publicElectric()+list.get(i).getPm_liftElectric()+list.get(i).getPm_TVFee()+
 					list.get(i).getPm_disinfection());
 			list2.add(g);
+			
+			
 		}
 		
-		net.sf.json.JSONArray jArray = new net.sf.json.JSONArray();        /* row별로 데이터를 담을 배열 */
 		
 		String str= jArray.fromObject(list2).toString();
-		JSONParser parser = new JSONParser();
 		try {
 			Object re= parser.parse(str);
 			
