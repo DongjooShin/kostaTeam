@@ -10,19 +10,31 @@
 <%
 	request.setCharacterEncoding("utf-8");
 
-	String id = null;
+
+
+	if (session.getAttribute("id") != null) {
+		System.out.println("apt디테일 로그인 유지!");
+		String id = (String) session.getAttribute("id");
+		request.setAttribute("id", id);
+
+	}
+
+
+
+
+	String id2 = null;
 	String r_id = null;
 	
-	id = request.getParameter("pr_propertyNo");
+	id2 = request.getParameter("pr_propertyNo");
 	r_id = request.getParameter("pr_APTName");
 	
 	
 	
 	int b_id = 0;
 	
-	if( id !=null){
+	if( id2 !=null){
 		
-		b_id = Integer.parseInt(id);
+		b_id = Integer.parseInt(id2);
 		
 	}
 	
@@ -32,7 +44,6 @@
 	
 	request.setAttribute("property", property);
 
-		
 	
 %>
 
@@ -96,9 +107,21 @@
 	
 } */
 
-function aaa(){
+function aaa(id2){
+
+	//alert("url");
 	
-	alert("url");
+	
+	
+	
+	url = "aptMessage.jsp?m_memberNo="+id2.m_memberNo.value+"&&id="+id2.id.value;
+	//alert(url);
+	
+	open(
+			url,
+			"confirm",
+			"toolbar=no, status=no, menubar=no, location=no, scrollbars=no, resizable=no, width=410, height=280");
+
 }
 
 </script>
@@ -154,10 +177,12 @@ function aaa(){
                         <div class="panel-footer">
                        <form method="post" name="send" >
                        							<%-- ${property.m_memberNo } --%>
-                       	<input type="hidden" value=${property.m_memberNo } name="m_memberNo">
-                      	<input type="button" value="쪽지보내기" name="sendId"  onclick="checkId1(this.form)" class="btn btn-lg btn-block btn-success"> 
-                        <input type="button" value="쪽지를보내자" name="sendId2" onclick="javascript:f()" class="sadas">
-                        <input type="button" value="버튼ㅅㅂ"  onclick="aaa()" class="btn btn-lg btn-block btn-success">
+                       	<input type="hidden" value="${property.m_memberNo }" name="m_memberNo">
+                       	<input type="hidden" value="${id }" name="id"> 
+                       	
+                
+					    <input type="button" value="쪽지보내기"  onclick="aaa(this.form)" class="btn btn-lg btn-block btn-success">
+                       
                        </form>
                                               
                         </div>

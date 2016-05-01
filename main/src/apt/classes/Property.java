@@ -38,9 +38,10 @@ public class Property implements Serializable{
 	private String pr_company;
 	private String pr_imageName;
 	private String pr_content;
-//	private int m_memberNo;
-	
 	private String m_memberNo;
+
+	
+	
 	public int getPr_propertyNo() {
 		return pr_propertyNo;
 	}

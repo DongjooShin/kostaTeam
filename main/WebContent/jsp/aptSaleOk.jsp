@@ -20,8 +20,22 @@
     <% 
     	request.setCharacterEncoding("utf-8");
     
+
+
+	if (session.getAttribute("id") != null) {
+		System.out.println("아파트ok로그인 유지!");
+		String id = (String) session.getAttribute("id");
+		request.setAttribute("id", id);
+
+	}
+	
+	
+
+
+
     	AptService service = AptService.getInstance();
     	int re = service.insertProperty(request);
+    	
     	
     	if(re>0){
     		response.sendRedirect("aptSaleList.jsp");

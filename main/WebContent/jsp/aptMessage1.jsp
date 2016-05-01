@@ -9,15 +9,26 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <%
+	if (session.getAttribute("id") != null) {
+		System.out.println("메세지로그인 유지!");
+		String id = (String) session.getAttribute("id");
+		request.setAttribute("id", id);
+
+	}
+%>
+
+
+
+<%
 	request.setCharacterEncoding("utf-8");
 	
-	String id = null;
+	String id2 = null;
 	
-	id = request.getParameter("m_memberNo");
+	id2 = request.getParameter("m_memberNo");
 
 	String m_id ="";
-	if(id !=null){
-		m_id = id;
+	if(id2 !=null){
+		m_id = id2;
 	}
 	
 	AptService service = AptService.getInstance();
@@ -26,6 +37,8 @@
 	request.setAttribute("property", property);
 	
 %>
+
+
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

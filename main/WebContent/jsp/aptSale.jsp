@@ -5,18 +5,33 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 
 <%
+	request.setCharacterEncoding("utf-8");
 
-	String id = request.getParameter("pr_propertyNo");
+
+
+	if (session.getAttribute("id") != null) {
+		System.out.println("aptsale 로그인 유지!");
+		String id = (String) session.getAttribute("id");
+		request.setAttribute("id", id); 
+
+	}
+
+
+%>
+
+<%
+
+	String id2 = request.getParameter("pr_propertyNo");
 	int pr_propertyNo=0;
 	
-	if(id !=null){
-		pr_propertyNo = Integer.parseInt(id);
+	if(id2 !=null){
+		pr_propertyNo = Integer.parseInt(id2);
 	}
 
 
 	Property property = null;
 	AptService service = AptService.getInstance();
-	if(id!=null){
+	if(id2!=null){
 		property = service.selectBoardService(pr_propertyNo);
 	}else{
 		property =null;
@@ -34,17 +49,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spacious &#8211; ThemeGrill Demo site</title>
 
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/dong/Preperty.css">
-<link rel="stylesheet" href="../css/mainLink1.css">
-<link rel="stylesheet" href="../css/mainLink2.css">
+<link rel="stylesheet" href="../css/Min/css/main.css">
+<link rel="stylesheet" href="../css/Min/css/dong/Preperty.css">
+<link rel="stylesheet" href="../css/Min/css/mainLink1.css">
+<link rel="stylesheet" href="../css/Min/css/mainLink2.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../css/Min/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/Min/bootstrap/css/styles.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="../js/Min/js/bootstrap.min.js"></script>
 <script src="../js/Min/js/custom.js"></script>
-<link rel="stylesheet" href="../cosmo/bootstrap.css" media="screen">
+<link rel="stylesheet" href="../css/Min/assets/cosmo/bootstrap.css" media="screen">
 <link rel="stylesheet" href="../assets/css/custom.min.css">
 <style type="text/css">
 .form-control {
@@ -82,6 +97,7 @@
 
 <body
 	class="home singular page page-id-7 page-template page-template-page-templates page-template-business page-template-page-templatesbusiness-php ">
+	
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header clearfix">
 
@@ -441,6 +457,7 @@
 									
 									<div class="form-group">
 										<div class="col-lg-6 col-lg-offset-5">
+											<input type="hidden" name="id" value="${id }">
 											<button type="reset" class="btn btn-default">Cancel</button>
 											<button type="submit" class="btn btn-primary">Submit</button>
 										</div>

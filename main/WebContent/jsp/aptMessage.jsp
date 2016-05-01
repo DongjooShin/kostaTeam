@@ -8,9 +8,17 @@
 <%
 	request.setCharacterEncoding("utf-8");
 
+
+if (session.getAttribute("id") != null) {
+	System.out.println("apt디테일 로그인 유지!");
+	String id = (String) session.getAttribute("id");
+	request.setAttribute("id", id);
+
+}
+
 	String m_memberNo = request.getParameter("m_memberNo");
 
-	request.setAttribute("id", m_memberNo);
+	request.setAttribute("m_memberNo", m_memberNo);
 	
 	
 %>
@@ -64,7 +72,9 @@
 </head>
 <body>
 
+<script type="text/javascript">
 
+</script>
 
 <form action="aptMessageOk.jsp" method="post">
 								
@@ -96,7 +106,7 @@
 							<div class="form-group">
 								<label class="sr-only" for="contact-email">Email</label> <input
 									type="text" name="m_memberNo" class="contact-email form-control"
-									id="contact-email" value=" ${id }">
+									id="contact-email" value=" ${m_memberNo }">
 							</div>
 							<!--
 				                        <div class="form-group">
@@ -109,9 +119,10 @@
 								
 								<textarea name="mg_content" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
 								<input type="hidden" name="mg_state" value="f">
-								<input type="submit" class="btn" value="보내기">
+								<input type="hidden" name="mg_from" value=${id }>
+								<input type="submit" class="btn" value="보내기" >
 								
-									
+								
 						
 							<!--     <form action="aptMessageOk.jsp" method="post">
 			                    <label class="sr-only" for="contact-message">Message</label>

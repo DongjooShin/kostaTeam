@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="apt.mapper.M_signupMapper"> <!-- namespace를 꼭 맞게 써주어야함 -->
+   <cache />
+   
+
+   <insert id="insertMember" parameterType="member">
+
+      insert into member(
+      m_memberNo,m_pass,m_buildingNo,m_roomNo,m_name,m_age,m_homeTel,m_tel,m_email,apt_APTGNo,v_flag)
+      
+      values(
+      #{m_memberNo},#{m_pass},#{m_buildingNo},#{m_roomNo},#{m_name},#{m_age},#{m_homeTel},#{m_tel},#{m_email},#{apt_APTGNo},#{v_flag}
+      )
+   </insert>
+   
+   <select id="checkMemberId" parameterType="String" resultType="Integer">
+   select count(*) from member where m_memberNo = #{m_memberNo}
+   								
+   </select>
+   
+   <select id="checkMemberPass" parameterType="LoginCheck" resultType="Integer">
+   select count(*) from member where m_memberNo = #{m_memberNo} and m_pass = #{m_pass}
+   </select>
+   
+   
+   
+   
+   <insert id="insertAPTsale" parameterType="Property">
+      
+
+
+     insert into Property(
+        pr_group,pr_APTName,pr_addr,pr_price,pr_deposit,pr_level,pr_totalLevel,pr_doorStruct,
+        pr_roomNum,pr_bathNum,pr_roomArea,pr_scale,pr_company,pr_content,
+        pr_propertyNo,pr_imageName,pr_tel,pr_date,m_memberNo
+      )
+      values(
+     #{pr_group},#{pr_APTName},#{pr_addr},#{pr_price},#{pr_deposit},#{pr_level},#{pr_totalLevel},
+     #{pr_doorStruct},#{pr_roomNum},#{pr_bathNum},#{pr_roomArea},#{pr_scale},#{pr_company},
+     #{pr_content},#{pr_propertyNo},#{pr_imageName},#{pr_tel},SYSDATE,#{m_memberNo}
+           )
+    
+   </insert>
+   
+   <select id="listSale" resultType="Property" parameterType="Search2">
+   select * from property
+   
+	  <if test="area!= null">
+   	<where>
+   		<foreach collection="area" item="item" separator="or"
+   			open="(" close=")">
+   			${item} LIKE #{searchKey}
+   		</foreach>
+   	</where>
+   
+   </if>
+	   order by pr_propertyNo desc
+   </select>
+   
+   
+    
+   
+ 
+   
+ <!--    <select id="listSale2" resultType="Message" parameterType="Search">
+   select * from message 
+   
+	  <if test="area!= null">
+   	<where>
+   		<foreach collection="area" item="item" separator="or"
+   			open="(" close=")">
+   			${item} LIKE #{searchKey}
+   		</foreach>
+   	</where>
+   
+   </if>
+	   order by mg_date desc
+   </select> -->
+
+   
+   
+   
+   
+   
+    <select id="countSale" resultType="int" parameterType="Search">
+    select count(*) from property
+    <if test="area!= null">
+   	<where>
+   		<foreach collection="area" item="item" separator="or"
+   			open="(" close=")">
+   			${item} LIKE #{searchKey}
+   		</foreach>
+   	</where>
+   
+   </if>
+   </select>
+   
+   
+     <select id="listSale2" resultType="Message" parameterType="Search2">
+   select * from message where mg_to = #{m_memberNo}
+  
+	   order by mg_date desc
+	  
+   </select>
+   
+   
+   
+   <select id="listSale3" resultType="Message" parameterType="Search2">
+   select * from message where mg_from = #{m_memberNo}
+  
+    order by mg_date desc
+	 </select>
+   
+   
+    <select id="countSale2" resultType="int" parameterType="Search2">
+    select count(*) from message
+  
+    <if test="area!= null">
+   	<where>
+   		<foreach collection="area" item="item" separator="or"
+   			open="(" close=")">
+   			${item} LIKE #{searchKey}
+   		</foreach>
+   	</where>
+   
+   </if>
+   </select>
+   
+   
+   
+   
+   
+   
+   
+   
+   <select id="selectAPT" parameterType="int" resultType="Property">
+   select * from property  where pr_propertyNo = #{pr_propertyNo}
+   </select>
+   
+   
+   
+
+   
+   
+   <!-- 자동번호  -->
+   
+   <select id="selectPr_id" resultType="Integer">
+   	select  max(pr_propertyNo) from property
+   </select>
+   
+    
+   <select id="selectM_id" parameterType="String" resultType="Property">
+   select * from property  where m_memberNo = #{m_memberNo}
+   
+   
+   </select>
+   
+ 
+
+     
+ <insert id="insertMsg2" parameterType="Message">
+     insert into Message(
+    	MG_CONTENT,MG_MESSAGENO,mg_date,m_memberNo,mg_state,mg_from,mg_to
+    
+      )
+      values(
+     	 #{mg_content},#{mg_messageNo},SYSDATE,#{mg_from},#{mg_state},#{mg_from},#{m_memberNo}
+
+      )
+    
+   </insert>
+  
+   <select id="countBoard" resultType="Integer">
+   select  max(mg_messageNo) from message
+
+   </select>
+   
+   <select id="selectMsg" parameterType="int" resultType="Message">
+ 	select * from message where mg_messageNo = #{mg_messageNo}
+ 	</select>
+   
+   	<update id="updateState" parameterType="Message">
+   		update message set mg_state = 't' where mg_messageNo = #{mg_messageNo}
+   	</update>
+   
+   
+   <delete id="delectsender" parameterType="int">
+   
+   	delete from message where mg_messageNo = #{mg_messageNo}
+   	
+   </delete>
+   
+   
+  <insert id="insertSurvey" parameterType="Survey">
+
+        insert into Survey(
+         su_group,su_date,su_surveyNo,su_context,su_startdate,su_enddate,apt_APTGNo
+      )
+      values(
+      #{su_group},#{su_date},#{su_surveyNo},#{su_context},#{su_startdate},#{su_enddate},#{apt_APTGNo}
+      
+      )
+   </insert>
+   
+     <insert id="insertSurveyDB" parameterType="SurveyDB">
+
+        insert into SurveyDB(
+         su_group,su_startdate,su_enddate,apt_APTGNo
+      )
+      values(
+      #{su_group},#{su_startdate},#{su_enddate},#{apt_APTGNo}
+      
+      )
+   </insert>
+   
+   
+   <select id="updategroup" resultType="Integer">
+   	select max(su_group) from survey
+	
+   </select>
+   
+      <select id="updateSurveyGru" resultType="Integer">
+   	select max(su_group) from SurveyDB
+	
+   </select>
+   
+   
+    <select id="surveyDeliver" resultType="Survey" parameterType="Survey">
+   select * from Survey where su_group = #{su_group} 
+  
+	   order by su_surveyNo asc
+	  
+   </select>
+   
+ 
+   
+   
+   <select id="countsurvey" resultType="int" parameterType="Survey">
+   select count(*) from Survey
+  
+   </select>
+   
+   
+   
+   <select id="surveyDB1" resultType="SurveyDB" parameterType="SurveyDB">
+   
+  <![CDATA[  select * from SURVEYDB  where su_startdate < #{su_date} AND su_group =#{su_group} AND #{su_date} < su_enddate ]]>
+	 
+   </select>
+   
+   <select id="selectAPTNo" parameterType="String" resultType="Member">
+   
+   		select * from member where m_memberNo = #{m_memberNo}
+   </select>
+   
+   <!--    <select id="seyveyapt" parameterType="Integer" resultType="int">
+
+    <![CDATA[  select su_startdate from SURVEYDB  where su_startdate > #{su_date} ]]>
+   
+   </select>
+    -->
+    
+</mapper>
+
+
+
+
+
+
+
+
