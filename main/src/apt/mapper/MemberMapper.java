@@ -25,6 +25,6 @@ public interface MemberMapper {
 
 	public List<Complaint> listManageComplaint(RowBounds rowBounds);
 
-	public Integer updateComplaint(Complaint complain);
+	public int updateComplaint(Complaint complain);
 
 }

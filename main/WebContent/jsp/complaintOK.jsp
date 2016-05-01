@@ -9,19 +9,16 @@ request.setCharacterEncoding("utf-8");
 <%
  	 AptService service  = AptService.getInstance();
 	String id = (String)session.getAttribute("id");
-	String num = request.getParameter("num");
+	String num = request.getParameter("cp_state");
 	if(num !=null){
 		
-		complain.setCp_complaintNo(Integer.parseInt(num));
 		service.updateComplaint(complain);
 	}else{
 		
-			complain.setM_memberNo(id);
-			int re =	service.inserComplaint(complain);
-			out.print(re);
+		complain.setM_memberNo(id);
+		int re = service.inserComplaint(complain);
 	}
 %>
-<jsp:forward page="main.jsp?body=mypage.jsp?body2=listComplaint.jsp"></jsp:forward>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

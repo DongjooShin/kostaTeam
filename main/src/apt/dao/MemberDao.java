@@ -182,12 +182,9 @@ public class MemberDao {
 		return complaint;
 	}
 
-	public int countComplaintManage() {
+	public Integer countComplaintManage() {
 		SqlSession sqlssession = getSqlSessionFactory().openSession();
-		int re =0;
-				if(sqlssession.getMapper(MemberMapper.class).countComplaintManage() !=null){
-					re =sqlssession.getMapper(MemberMapper.class).countComplaintManage();
-				}
+				Integer	re =sqlssession.getMapper(MemberMapper.class).countComplaintManage();
 		sqlssession.close();
 		return re;
 	}
@@ -222,15 +219,24 @@ public class MemberDao {
 
 	public void updateComplaint(Complaint complain) {
 		// TODO Auto-generated method stub
+		System.out.println(complain.getCp_state()+"상태임2222222222222222s");
 		SqlSession sqlssession = getSqlSessionFactory().openSession();
-			int re=	sqlssession.getMapper(MemberMapper.class).updateComplaint(complain);
-			
+		int re = 0;
+		try {
+			re=	sqlssession.getMapper(MemberMapper.class).updateComplaint(complain);
+			System.out.println("저장됬는지 안됬는지"+re);
 			if(re>0){
 				sqlssession.commit();
 			}else{
 				sqlssession.rollback();
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
 			sqlssession.close();
+		}
+			
+			
 	}
 
 		 

@@ -51,7 +51,7 @@
    </select>
    <select id="countComplaintManage" resultType="Integer">
       select count(*)
-   from complaint
+  	 from complaint
    </select>
    <select id="listComplaintManage" resultType="Complaint">
          select *
@@ -74,9 +74,16 @@
    <update id="updateComplaint" parameterType="Complaint">
    update complaint
    set  cp_state = #{cp_state}
-   where cp_complaintNo = ${cp_complaintNo}
-   
+   where cp_complaintNo = #{cp_complaintNo}
    </update>
+   
+   <select id="listManageComplaint" resultType="Complaint">
+   	select *
+ 	from complaint
+ 	order by cp_complaintNo
+ 	
+   
+   </select>
 </mapper>
 
 

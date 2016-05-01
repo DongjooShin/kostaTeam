@@ -55,7 +55,13 @@ function next() {
 			<td align="left">${complaint.cp_date} </td>
 			
 			<c:if test="${complaint.cp_state==1}">
- 			<td align="center">처리대기중</td>
+ 			  <td align="center">처리대기중</td>
+			</c:if>
+			<c:if test="${complaint.cp_state==2}">
+ 			  <td align="center">처리중</td>
+			</c:if>
+			<c:if test="${complaint.cp_state==3}">
+ 			  <td align="center">완료</td>
 			</c:if>
 		</c:forEach>
 	</table>

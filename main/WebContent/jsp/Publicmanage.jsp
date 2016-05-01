@@ -31,16 +31,15 @@
     <script src="../js/gidae/morris/morris.min.js"></script>
     <script src="../js/gidae/morris/morris-data.js"></script>
 	    <!-- Bootstrap Core CSS -->
+	    
+	    
+	    
     <link href="../css/gidae/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link href="../css/gidae/sb-admin.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-	    <!-- jQuery Version 1.11.0 -->
     <script src="../js/gidae/jquery-1.11.0.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
     <script src="../js/gidae/bootstrap.min.js"></script>
 
     

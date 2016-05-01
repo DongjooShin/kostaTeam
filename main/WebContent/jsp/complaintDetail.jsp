@@ -31,7 +31,6 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 
-
 function fn_update() {
 	 window.location.href="main.jsp?body=mypage.jsp?body2=../plugins/gidae/smart/SmartEditor2.jsp?num=<%=complaint.getCp_complaintNo()%>";
 	

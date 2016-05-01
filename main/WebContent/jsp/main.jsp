@@ -13,7 +13,6 @@
 	
 	int check = -1;
 	if (session.getAttribute("id") != null) {
-		System.out.println("로그인 유지!");
 		String id = (String) session.getAttribute("id");
 		request.setAttribute("id", id);
 		check = 1;
@@ -46,8 +45,8 @@
 	<div class="main">
 		 <jsp:include page="${body }"></jsp:include> 
 	</div>
-	<div class="footer">
+ 	<div class="footer">
 		<jsp:include page="footer.jsp"></jsp:include>
-	</div>
+	</div> 
 </body>
 </html>

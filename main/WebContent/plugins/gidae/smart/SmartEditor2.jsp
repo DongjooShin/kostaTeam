@@ -29,11 +29,11 @@
 <div></div>
 <div>
 <form action="/main/jsp/mypage.jsp?body2=complaintOK.jsp" method="post">
-<input type="hidden" name="num" value="${num }">
 	<c:if test="${num !=null }">
 		<input type="text" name="cp_state" value="${num }">
 	</c:if>
-	<input type="text" name="cp_title" value="${com.cp_title }"></input>
+	<input type="hidden"" name="cp_complaintNo" value="${com.cp_complaintNo }">
+	<input type="text" name="cp_title" value="${com.cp_title }" width="30px"></input>
 	<textarea name="cp_content" id="ir1" rows="10" cols="100" style="width:766px; height:412px; display:none;">${com.cp_content}</textarea>
 	<!--textarea name="ir1" id="ir1" rows="10" cols="100" style="width:100%; height:412px; min-width:610px; display:none;"></textarea-->
 		<input type="button" onclick="submitContents(this);" value="저장" />

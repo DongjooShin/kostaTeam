@@ -13,7 +13,6 @@
 		pageNum ="1";
 	}
 	
-	int requestPage =Integer.parseInt(pageNum);
 	AptService service = AptService.getInstance();
 	 ListModel list= service.ListComplaintManage(request, pageNum);
 	 request.setAttribute("list", list);
@@ -53,7 +52,15 @@ function next() {
 			<a href="main.jsp?body=mypage.jsp?body2=complaintDetail.jsp?b_id=${complaint.cp_complaintNo}">${complaint.cp_title }</a></td>
  			<td align="center">${complaint.m_memberNo}</td>
 			<td align="left">${complaint.cp_date} </td>
- 			<td align="center">${complaint.cp_state}</td>
+			<c:if test="${complaint.cp_state==1}">
+ 			<td align="center">처리대기중</td>
+			</c:if>
+			<c:if test="${complaint.cp_state==2}">
+ 			<td align="center">처리중</td>
+			</c:if>
+			<c:if test="${complaint.cp_state==3}">
+ 			<td align="center">완료</td>
+			</c:if>
 		</c:forEach>
 	</table>
 	<br><br>

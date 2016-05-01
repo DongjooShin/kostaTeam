@@ -47,7 +47,6 @@
     				<div class="col-lg-2"></div>
                     <div class="row-fluid col-lg-8">
                         <div class="alert alert-success">
-							<button type="button" class="close" data-dismiss="alert">&times;</button>
                             <h4>마이페이지</h4>
                         	</div>
                         	<div class="navbar">

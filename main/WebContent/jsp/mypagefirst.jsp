@@ -19,52 +19,51 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">
+
+
+function next() {
+	window.location.href ="main.jsp?body=mypage.jsp?body2=listComplaint.jsp&&body=mypage.jsp";
+}
+</script>
+
+	    
 </head>
 <body>
-                    <div class="row-fluid">
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Statistics</div>
-                                <div class="pull-right"><span class="badge badge-warning">View More</span>
-
-                                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>연도별관리비</h3>
                             </div>
-                            <div class="block-content collapse in">
-                                <div class="span3">
-                                    <div class="chart" data-percent="73">73%</div>
-
-                </div>
-                                </div>
-                                <div class="span3">
-                                    <div class="chart" data-percent="53">53%</div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Page Views</span>
-
-                                    </div>
-                                </div>
-                                <div class="span3">
-                                    <div class="chart" data-percent="83">83%</div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Users</span>
-
-                                    </div>
-                                </div>
-                                <div class="span3">
-                                    <div class="chart" data-percent="13">13%</div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Orders</span>
-
-                                    </div>
+                            <div class="panel-body">
+                                <div id="morris-line-chart"></div>
+                                <div class="text-right">
                                 </div>
                             </div>
                         </div>
-                        <!-- /block -->
                     </div>
+                    <div class="col-lg-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i>달별관리비</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-bar-chart"></div>
+                                <div class="text-right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                     <!-- /block -->
                     <div class="row-fluid">
                         <div class="span6">
                             <!-- block -->
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
-                                    <div class="muted pull-left">Users</div>
-                                    <div class="pull-right"><span class="badge badge-info">1,234</span>
+                                    <div class="muted pull-left">건의사항</div>
+                                    <div class="pull-right"><span class="badge badge-info" onclick="next()">더보기</span>
 
                                     </div>
                                 </div>
@@ -96,7 +95,7 @@
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
                                     <div class="muted pull-left">Orders</div>
-                                    <div class="pull-right"><span class="badge badge-info">752</span>
+                                    <div class="pull-right"><span class="badge badge-info">더보기</span>
 
                                     </div>
                                 </div>
@@ -142,7 +141,7 @@
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
                                     <div class="muted pull-left">Clients</div>
-                                    <div class="pull-right"><span class="badge badge-info">17</span>
+                                    <div class="pull-right"><span class="badge badge-info">더보기</span>
 
                                     </div>
                                 </div>
@@ -186,7 +185,7 @@
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
                                     <div class="muted pull-left">Invoices</div>
-                                    <div class="pull-right"><span class="badge badge-info">812</span>
+                                    <div class="pull-right"><span class="badge badge-info">더보기</span>
 
                                     </div>
                                 </div>
@@ -227,6 +226,18 @@
                         <!-- /block -->
                     </div>
                 </div>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="../js/gidae/gidae/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/gidae/gidae/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../js/gidae/gidae/morris/raphael.min.js"></script>
+    <script src="../js/gidae/gidae/morris/morris.min.js"></script>
+    <script src="../js/gidae/gidae/morris/morris-data.js"></script>
+
 
 </body>
 </html>

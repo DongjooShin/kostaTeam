@@ -44,10 +44,9 @@
     </head>
     
     <body>
-    				<div class="col-lg-2"></div>
-                    <div class="row-fluid col-lg-8">
+    				<div class="col-lg-1"></div>
+                    <div class="row-fluid col-lg-10">
                         <div class="alert alert-success">
-							<button type="button" class="close" data-dismiss="alert">&times;</button>
                             <h4>관리자마이페이지</h4>
                         	</div>
                         	<div class="navbar">
@@ -77,7 +76,10 @@
 	                                </ul>
                             	</div>
                         	</div>
-              <div class="tab-content">
+                    	
+                    	
+			<div class="col-lg-1"></div>
+              <div class="tab-content col-lg-10">
  			
  			<jsp:include page="${body2 }"></jsp:include>
  			
