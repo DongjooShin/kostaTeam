@@ -11,12 +11,19 @@
 <%@page import="com.sun.java.swing.plaf.windows.resources.windows"%>
 <%@page import="apt.dao.AptService"%>
 <%@page import="apt.classes.Member"%>
+<%@page import="apt.dao.AptService"%>
 <%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	/* Enumeration attr = session.getAttributeNames(); */
+	String body = request.getParameter("body");
+	out.print(body);
+	if(body ==null){
+	body = "start.jsp";
+	}
+	
 	int check = -1;
 	
 	if (session.getAttribute("id") != null) {
@@ -46,12 +53,16 @@
 	request.setAttribute("check", check);
 	
 	
-	//이부분 나중에지워라 
+/* 
 	String id ="abc123";
 	AptService service = AptService.getInstance();
 	Member member = service.selectAptgroup(id);
 	int Bb2 = member.getApt_APTGNo();
-//	System.out.println(Bb2);
+
+	 */
+	request.setAttribute("body", body);
+	
+	
 	
 %>
 
@@ -77,12 +88,13 @@ window.open("surveyRegistdeliver.jsp", "n", "height=500,width=600 ,scrollbars=ye
 		<c:if test="${check ==1 }">
 			<jsp:include page="header.jsp?id=${id }"></jsp:include>
 		</c:if>
+		
 		<c:if test="${check ==-1 }">
 			<jsp:include page="header.jsp"></jsp:include>
 		</c:if>
-	</div>
+	</div> 
 	<div class="main">
-		<jsp:include page="start.jsp"></jsp:include>
+		 <jsp:include page="${body }"></jsp:include> 
 	</div>
 	<div class="footer">
 		<jsp:include page="footer.jsp"></jsp:include>

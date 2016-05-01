@@ -1,3 +1,4 @@
+<%@page import="apt.classes.ListModel1"%>
 <%@page import="apt.classes.ListModel"%>
 <%@page import="apt.dao.AptService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -33,9 +34,9 @@
 	int requestPage = Integer.parseInt(pageNum);
 	
 	AptService service = AptService.getInstance();
-	ListModel listModel = service.listAPTSale(requestPage, request);
+	ListModel1 listModel1 = service.listAPTSale(requestPage, request);
 	
-	request.setAttribute("listModel", listModel);
+	request.setAttribute("listModel", listModel1);
 	
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

@@ -10,7 +10,10 @@ body {
     margin-top: 100px;
     background-color: white;
 }
-
+table{
+    background-color: white;
+	
+}
 @media(min-width:768px) {
     body {
         margin-top: 50px;

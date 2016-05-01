@@ -1,3 +1,4 @@
+<%@page import="apt.classes.Member"%>
 <%@page import="apt.classes.SurveyDB"%>
 <%@page import="apt.dao.AptService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -17,7 +18,15 @@ if (session.getAttribute("id") != null) {
 
 
 AptService service = AptService.getInstance();
-
+Member member = service.selectAptgroup(id);
+int Bb2 = -1;
+Bb2 = member.getApt_APTGNo();
+if(Bb2 != -1){
+	
+	session.setAttribute("APTNO", Integer.toString(Bb2));
+	request.setAttribute("APTNO", Bb2);
+	
+	}
 
 
 /* 
@@ -25,7 +34,7 @@ int b = service.surveygroup(request); //세션아이디값가져와야대 아이
 
 System.out.print(b+"입니다."); */
 
-SurveyDB surveyDB = service.surveygroup(request);
+SurveyDB surveyDB = service.surveygroup(request, Bb2);
 
 request.setAttribute("surveyDB", surveyDB);
 

@@ -24,6 +24,7 @@
 		<typeAlias type="apt.classes.SurveyDB" alias="SurveyDB"/>
 		
 		
+		<typeAlias type="apt.classes.Complaint" alias="Complaint"/>
 
 	</typeAliases>
 	
@@ -42,6 +43,7 @@
 		<mapper resource="apt/xml/Apt.xml"/>
 		<mapper resource="apt/xml/ManagementFee.xml"/>
 		<mapper resource="apt/xml/PublicManagement.xml"/>
+		<mapper resource="apt/xml/member.xml"/>
 		<mapper resource="apt/xml/Voter.xml"/>
 </mappers>
 
